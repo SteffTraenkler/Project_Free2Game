@@ -9,7 +9,7 @@ export default function Searchbar() {
     }
 
     return (
-        < section >
+        < section className='hallo'>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
