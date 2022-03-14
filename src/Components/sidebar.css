@@ -1,7 +1,7 @@
 aside{
     position: absolute;
     top: 0;
-    border-right: 5px solid white;
+    border-right: 2px solid white;
     z-index: 3;
     /* background-color: #040F14; */
 }
@@ -49,13 +49,13 @@ aside{
 .burger.close span {
     transform: rotate(-45deg);
     top: 13px;
-    width: 30px;
+    width: 25px;
 }
 
 .burger.close span::before {
     top: 0;
     transform: rotate(90deg);
-    width: 30px;
+    width: 25px;
 }
 
 .burger.close span::after {
@@ -76,7 +76,7 @@ aside{
 .menu ul{
     padding: 20px;
 }
-.menu {
+/* .menu {
     z-index: -1;
     min-height: 100%;
     min-width: 100%;
@@ -87,8 +87,8 @@ aside{
     text-align: center;
     padding-top: 50px;
     transition: all .4s ease-in-out;
-}
-.menu.overlay {
+} */
+/* .menu.overlay {
     visibility: visible;
     opacity: 1;
     padding-top: 100px;
@@ -102,4 +102,4 @@ aside{
     text-decoration: none;
     display: block;
     margin-bottom: 100px;
-}
+} */

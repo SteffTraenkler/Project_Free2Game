@@ -24,6 +24,11 @@ const handleToggle = (prev) => {
                 <li><a href=""><div><img src={AllGame} alt="" /></div>All Games</a></li>
                 <li><a href=""><div><img src={RecentlyKreuz} alt="" /></div>Recently Added</a></li>
             </ul>
+            <ul>
+                <li><a href=""><div><img src={HomeBtn} alt="" /></div>Home</a></li>
+                <li><a href=""><div><img src={AllGame} alt="" /></div>All Games</a></li>
+                <li><a href=""><div><img src={RecentlyKreuz} alt="" /></div>Recently Added</a></li>
+            </ul>
             </section>
         </aside>
     )
