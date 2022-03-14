@@ -1,9 +1,33 @@
+
+
+
 aside{
     position: absolute;
     top: 0;
     border-right: 2px solid white;
     z-index: 3;
+    width: 50px;
     /* background-color: #040F14; */
+}
+
+.logoClose{
+    margin-left: 60px;
+}
+
+.logoOpen{
+    margin-left: 210px;
+}
+
+.hideText{
+    display: none;
+}
+.showText{
+    position: absolute;
+    display: unset;
+}
+
+.showMenu{
+    width: 200px;
 }
 .burger {
     cursor: pointer;
