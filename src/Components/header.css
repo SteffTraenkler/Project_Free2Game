@@ -11,4 +11,5 @@ input[type=submit] {
     display: block;
     height: 30px;
     width: 30px;
+    cursor: pointer;
 }
