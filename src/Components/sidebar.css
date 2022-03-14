@@ -1,0 +1,105 @@
+aside{
+    position: absolute;
+    top: 0;
+    border-right: 5px solid white;
+    z-index: 3;
+    /* background-color: #040F14; */
+}
+.burger {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin: 5px 20px ;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+}
+
+.burger span,
+.burger span::before,
+.burger span::after {
+    background: #fff;
+    display: block;
+    height: 2px;
+    opacity: 1;
+    position: absolute;
+    transition: .4s ease-in;
+}
+
+.burger span::before,
+.burger span::after {
+    content: "";
+}
+
+.burger span {
+    /* top: 0; */
+    top: 13px;
+    width: 20px;
+}
+
+.burger span::before {
+    top: -10px;
+    width: 20px;
+}
+
+.burger span::after {
+    top: 10px;
+    width: 20px;
+}
+.burger.close span {
+    transform: rotate(-45deg);
+    top: 13px;
+    width: 30px;
+}
+
+.burger.close span::before {
+    top: 0;
+    transform: rotate(90deg);
+    width: 30px;
+}
+
+.burger.close span::after {
+    top: 0;
+    left: 0;
+    transform: rotate(90deg);
+    opacity: 0;
+    width: 0;
+}
+.menu li {
+    list-style: none;
+}
+.menu li a{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+.menu ul{
+    padding: 20px;
+}
+.menu {
+    z-index: -1;
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    padding-top: 50px;
+    transition: all .4s ease-in-out;
+}
+.menu.overlay {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 100px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 100px;
+}

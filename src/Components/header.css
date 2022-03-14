@@ -2,9 +2,8 @@ header{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-left: 60px;
 }
-
-
 input[type=submit] {
     background: url(../img/Search.png) no-repeat;
     border: 0;
