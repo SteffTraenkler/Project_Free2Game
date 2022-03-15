@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Details from './Components/details';
+import Added from './Components/recentlyadded';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -12,6 +13,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/details/:id" element={<Details />} />
+        <Route path="/Added" element={<Added />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

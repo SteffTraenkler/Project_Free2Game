@@ -1,5 +1,6 @@
 import WindowsImg from '../../img/Windows.png'
 import BrowerImg from '../../img/Browser.png'
+import { Link } from 'react-router-dom'
 
 
 const GeneralCard = (props) => {
@@ -12,14 +13,14 @@ const GeneralCard = (props) => {
                 <div>
                     <h3>{props.title}</h3>
                     <p className="contentPara">{props.short_description}</p>
-                    {/* <Link to={`details`}>Read More</Link> */}
+                    <Link className='readMore' to={`details`}>Read More</Link>
                 </div>
 
                 <div className="contentBottom">
                     {(() => {
                         if (props.platform == "PC (Windows)") {
                             return (
-                                <div>
+                                <div className='windows'>
                                     <img src={WindowsImg} alt="windowsImg" />
                                 </div>
                             )

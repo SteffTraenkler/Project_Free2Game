@@ -27,7 +27,7 @@ export default function Sidebar() {
                     <ul>
                         <li><a href=""><div><img src={HomeBtn} alt="" /></div><span className={`menuNav ${navbarOpen ? "hideText" : "showText"}`}>Home</span></a></li>
                         <li><a href=""><div><img src={AllGame} alt="" /></div><span className={`menuNav ${navbarOpen ? "hideText" : "showText"}`}>All Games</span></a></li>
-                        <li><a href=""><div><img src={RecentlyKreuz} alt="" /></div><span className={`menuNav ${navbarOpen ? "hideText" : "showText"}`}>Recently Added</span></a></li>
+                        <Link to="/Added"><li><a href=""><div><img src={RecentlyKreuz} alt="" /></div><span className={`menuNav ${navbarOpen ? "hideText" : "showText"}`}>Recently Added</span></a></li></Link>
                     </ul>
                 </section>
             </aside>
