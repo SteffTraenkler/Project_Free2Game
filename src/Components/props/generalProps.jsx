@@ -14,7 +14,7 @@ const GeneralCard = (props) => {
                     <h3>{props.title}</h3>
                     <p className="contentPara">{props.short_description}</p>
                     <Link className='readMore' to={`details`}>Read More</Link>
-                </div>
+                </div>  
 
                 <div className="contentBottom">
                     {(() => {
@@ -26,7 +26,7 @@ const GeneralCard = (props) => {
                             )
                         } else if (props.platform == "Web Browser") {
                             return (
-                                <div>
+                                <div className='browser'>
                                     <img src={BrowerImg} alt="browserImg" />
                                 </div>
                             )

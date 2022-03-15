@@ -1,10 +1,116 @@
-.sectionTop4Games {
-    /* display: grid;
-    grid-template-columns: 1fr 2fr; */
-    display: flex;
+.sectionTop {
+    color: white;
     margin-left: 10rem;
+    margin-bottom: 10rem;
+    font-family: 'Oswald', sans-serif;
 }
 
-.sectionTop4Games:nth-of-type(1) {
-    /* background-image: url(${props.thumbnail}); */
+.sectionTop4Games {
+    margin-left: 40%;
+    margin-right: 2rem;
 }
+
+.sectionTop4Games article {
+    display: flex;
+    border-radius: 2rem;
+    background-color: #102130;
+    margin-top: 2rem;
+    position: relative;
+}
+
+.sectionTop4Games article .top4div {
+    padding-left: 2rem;
+    width: 300px;
+}
+
+.top4bottom {
+    display: flex;
+}
+
+.top4bottom p {
+    padding: 15px;
+    border: 1px solid red;
+    border-radius: 15px;
+}
+
+.top4pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+}
+
+.sectionTop4Games article .testKey {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border: 1px solid red;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    /* margin-right: 13rem;
+    margin-top: 2rem; */
+}
+
+
+/*---Out ----*/
+
+.sectionTop4Games article:nth-of-type(1) {
+    position: absolute;
+    top: 114rem;
+    left: 10rem;
+    width: 35%;
+    height: 80%;
+    background: url('../../img/dragon.png') no-repeat center/cover;
+}
+
+.sectionTop4Games article:nth-of-type(1) div:nth-of-type(1) .top4pic {
+    display: none;
+    position: absolute;
+    left: 10rem;
+}
+
+.sectionTop4Games article:nth-of-type(1) .top4div {
+    margin-top: 25rem;
+    width: 50%;
+}
+
+.sectionTop4Games article:nth-of-type(1) .top4div h3 {
+    font-size: 3rem;
+}
+
+.sectionTop4Games article:nth-of-type(1) .top4bottom .windows img {
+    background-color: black;
+}
+
+.sectionTop4Games article:nth-of-type(1) .top4bottom p {
+    background-color: black;
+}
+
+.sectionTop4Games article:nth-of-type(1) .testKey {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border: 1px solid red;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    left: 37rem;
+    top: 1rem;
+}
+
+
+/* .sectionTop4Games */
+
+
+/* .sectionTop4Games article:nth-of-type(1) img {
+    display: none;
+    background-image: url(${props.thumbnail});
+} */

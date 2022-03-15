@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
-.sectionHero {
+
+/* .sectionHero {
     background: url(../img/Hero.png) no-repeat center/cover;
     height: 70vh;
     margin: 4rem 0 0 4rem;
@@ -15,9 +16,8 @@
 }
 
 .sectionRecently {
-    margin: 3rem 2rem 0rem 10rem;
+    margin: 3rem 2rem 0 10rem;
     color: white;
-    padding-bottom: 10rem;
 }
 
 .sectionRecently .recentPic {
@@ -38,64 +38,31 @@
     font-family: 'Oswald', sans-serif;
     /* flex-wrap: wrap;
     width: 80%; */
-}
 
+
+/* }
 .sectionRecently article article {
     display: flex;
     flex-direction: column;
     background-color: #102130;
 }
-
 .contentWrapper {
     padding: 0 2rem 1rem 2rem;
 }
-
-.contentWrapper .contentPara {
+.contentPara {
     line-height: 2rem;
     font-family: 'Titillium Web', sans-serif;
-    display: -webkit-box;
-    overflow: hidden;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
 }
-
-.readMore {
-    display: block;
-    width: 30%;
-    margin-top: 3rem;
-}
-
 .contentBottom {
     display: flex;
     border-top: 1px solid rgba(255, 255, 255, 0.529);
     padding-top: 1rem;
 }
-
 .contentBottom img {
     padding: 15px 1rem;
 }
-
 .contentBottom p {
     padding: 10px;
     border: 1px solid red;
     border-radius: 15px;
-}
-
-.buttonOutside {
-    width: 7%;
-    margin-top: 2rem;
-    text-align: center;
-}
-
-.buttonOutside a {
-    position: absolute;
-    right: 2rem;
-    display: block;
-    background-color: #FF4654;
-    padding: 10px 25px;
-    text-decoration: none;
-    color: white;
-    border-radius: 10px;
-    font-family: 'Oswald', sans-serif;
-    font-weight: bold;
-}
+} */

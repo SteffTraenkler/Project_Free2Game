@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 import '../Components/home.css'
+import '../Components/props/top4games.css'
+import '../Components/props/topBrowser.css'
 import GeneralCard from "./props/generalProps"
 import Top4GamesCard from "./props/top4games"
+import TopBrowser from "./props/topBroswer"
 
 
 
@@ -9,6 +13,7 @@ export default function Home() {
 
     const [recent, setRecent] = useState([])
     const [topgames, setTopgames] = useState([])
+    const [topbroswer, setTopBrowser] = useState([])
 
     let x
 
@@ -43,6 +48,22 @@ export default function Home() {
             })
     }, [x])
 
+    useEffect(() => {
+        let newTopBrowserArr = []
+
+        // let loaded = true //für user um das er nicht zu dolle klicken
+
+        fetch('https://www.freetogame.com/api/games?platform=browser&sort-by=release-date&sort-by=popularity')
+            .then(respone => respone.json())
+            .then(json => {
+                console.log(json);
+                newTopBrowserArr = json.splice(0, 4)
+                console.log(newTopBrowserArr);
+                setTopBrowser(newTopBrowserArr)
+
+            })
+    }, [x])
+
     return (
 
         <main>
@@ -66,10 +87,13 @@ export default function Home() {
                         )
                     })}
                 </article>
-            </section>
-            <section className="sectionTopgames">
+                <div className="buttonOutside"><Link to='/allgames'>SHOW MORE</Link></div>           
+                    
+                </section>
+
+            <section className="sectionTop">
                 <h2>Top 4 Games for PC in June 2021</h2>
-                <article>
+                <article className="sectionTop4Games">
                     {topgames.map((elem, j) =>{
                         return(
                             <Top4GamesCard key={j}
@@ -78,10 +102,30 @@ export default function Home() {
                                 short_description={elem.short_description}
                                 platform={elem.platform}
                                 genre={elem.genre}
+                                counter={j +1}
                             />
                         )
                     })}
                 </article>
+                <div className="buttonOutside"><Link to='/allgames'>SHOW MORE</Link></div>       
+            </section>
+
+            <section className="sectionRecently">
+                <h2>Top 4 Games for Browser in June 2021</h2>
+                <article>
+                    {topbroswer.map((eleme, k) =>{
+                        return(
+                            <TopBrowser key={k}
+                                thumbnail={eleme.thumbnail}
+                                title={eleme.title}
+                                // short_description={eleme.short_description}
+                                platform={eleme.platform}
+                                genre={eleme.genre}
+                            />
+                        )
+                    })}
+                </article>
+                <div className="buttonOutside"><Link to='/allgames'>SHOW MORE</Link></div>       
             </section>
 
         </main>
