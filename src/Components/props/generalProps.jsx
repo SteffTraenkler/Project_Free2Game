@@ -13,8 +13,8 @@ const GeneralCard = (props) => {
                 <div>
                     <h3>{props.title}</h3>
                     <p className="contentPara">{props.short_description}</p>
-                    <Link className='readMore' to={`details`}>Read More</Link>
-                </div>  
+                    <Link className='readMore' to={`/details/${props.id}`}>Read More</Link>
+                </div>
 
                 <div className="contentBottom">
                     {(() => {

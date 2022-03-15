@@ -27,17 +27,17 @@ export default function Added() {
 
             })
     }, [x])
-    
+
     return (
-        
+
         <main>
-            <Header/>
-            <Searchbar/>
-            <Sidebar/>
+            <Header />
+            <Searchbar />
+            <Sidebar />
             <section className="secHero">
-                <article> 
-                <h1>RECENTLY ADDED</h1>
-                </article> 
+                <article>
+                    <h1>RECENTLY ADDED</h1>
+                </article>
             </section>
             <section className="secRecently">
                 <article>
@@ -48,6 +48,7 @@ export default function Added() {
                                 title={ele.title}
                                 platform={ele.platform}
                                 genre={ele.genre}
+                                id={ele.id}
                             />
                         )
                     })}
@@ -55,5 +56,5 @@ export default function Added() {
             </section>
         </main>
     )
-    
+
 }

@@ -33,16 +33,16 @@ export default function Home() {
             })
     }, [x])
 
-    useEffect(() =>{
+    useEffect(() => {
         let newTopgamesArr = []
-        
+
         //Wenn möglich Datum noch anpassen im fatch
 
         fetch('https://www.freetogame.com/api/games?platform=pc&sort-by=release-date&sort-by=popularity')
             .then(respone => respone.json())
-            .then(json =>{
+            .then(json => {
                 console.log(json);
-                newTopgamesArr = json.splice(0,4)
+                newTopgamesArr = json.splice(0, 4)
                 console.log(newTopgamesArr);
                 setTopgames(newTopgamesArr)
             })
@@ -83,49 +83,52 @@ export default function Home() {
                                 short_description={ele.short_description}
                                 platform={ele.platform}
                                 genre={ele.genre}
+                                id={ele.id}
                             />
                         )
                     })}
                 </article>
-                <div className="buttonOutside"><Link to='/allgames'>SHOW MORE</Link></div>           
-                    
-                </section>
+                <div className="buttonOutside"><Link to='/allgames'>SHOW MORE</Link></div>
+
+            </section>
 
             <section className="sectionTop">
                 <h2>Top 4 Games for PC in June 2021</h2>
                 <article className="sectionTop4Games">
-                    {topgames.map((elem, j) =>{
-                        return(
+                    {topgames.map((elem, j) => {
+                        return (
                             <Top4GamesCard key={j}
                                 thumbnail={elem.thumbnail}
                                 title={elem.title}
                                 short_description={elem.short_description}
                                 platform={elem.platform}
                                 genre={elem.genre}
-                                counter={j +1}
+                                id={elem.id}
+                                counter={j + 1}
                             />
                         )
                     })}
                 </article>
-                <div className="buttonOutside"><Link to='/allgames'>SHOW MORE</Link></div>       
+                <div className="buttonOutside"><Link to='/allgames'>SHOW MORE</Link></div>
             </section>
 
             <section className="sectionRecently">
                 <h2>Top 4 Games for Browser in June 2021</h2>
                 <article>
-                    {topbroswer.map((eleme, k) =>{
-                        return(
+                    {topbroswer.map((eleme, k) => {
+                        return (
                             <TopBrowser key={k}
                                 thumbnail={eleme.thumbnail}
                                 title={eleme.title}
                                 // short_description={eleme.short_description}
                                 platform={eleme.platform}
                                 genre={eleme.genre}
+                                id={eleme.id}
                             />
                         )
                     })}
                 </article>
-                <div className="buttonOutside"><Link to='/allgames'>SHOW MORE</Link></div>       
+                <div className="buttonOutside"><Link to='/allgames'>SHOW MORE</Link></div>
             </section>
 
         </main>

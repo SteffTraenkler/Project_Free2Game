@@ -6,7 +6,7 @@ export default function Details() {
     let gameID = useParams('id')
 
     const [gameDetail, setGameDetail] = useState([])
-    const [screenShot, setScreenshot] = useState()
+    const [screenShot, setScreenshot] = useState(['1', '2', '3'])
 
     useEffect(() => {
         fetch(`https://www.freetogame.com/api/game?id=${gameID.id}`)
