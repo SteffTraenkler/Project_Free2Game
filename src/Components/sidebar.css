@@ -3,9 +3,9 @@ aside {
     top: 0;
     border-right: 2px solid white;
     z-index: 3;
-    width: 5%;
+    width: 4.5rem;
     height: 100vh;
-    /* background-color: #040F14; */
+    background-color: #040F14;
 }
 
 .img {
@@ -14,10 +14,14 @@ aside {
 }
 
 .logoClose {
+    position: absolute;
+    top: 0;
     margin-left: 60px;
 }
 
 .logoOpen {
+    position: absolute;
+    top: 0;
     margin-left: 190px;
 }
 
