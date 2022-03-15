@@ -1,23 +1,22 @@
 import { useState, useEffect } from "react"
-import WindowsImg from '../img/Windows.png'
-import BrowerImg from '../img/Browser.png'
 import '../Components/home.css'
+import GeneralCard from "./props/generalProps"
 
 
-export default function Home () {
+export default function Home() {
 
     const [recent, setRecent] = useState([])
 
-    let x 
+    let x
 
-    useEffect(() =>{
-        let newRecentArr = [] 
+    useEffect(() => {
+        let newRecentArr = []
 
         // let loaded = true //für user um das er nicht zu dolle klicken
 
         fetch('https://www.freetogame.com/api/games?sort-by=release-date')
             .then(respone => respone.json())
-            .then(json =>{
+            .then(json => {
                 console.log(json);
                 newRecentArr = json.splice(0, 4)
                 console.log(newRecentArr);
@@ -25,53 +24,27 @@ export default function Home () {
 
             })
     }, [x])
-    
-    return(
-        
+
+    return (
+
         <main>
             <section className="sectionHero">
                 {/* <article> */}
-                    <h1>FIND & TRACK THE BEST FREE-TO-PLAY GAMES!</h1>
+                <h1>FIND & TRACK THE BEST FREE-TO-PLAY GAMES!</h1>
                 {/* </article> */}
             </section>
             <section className="sectionRecently">
                 <h2>Recently Added</h2>
                 <article>
-                    {recent.map((ele, i) =>{
-                        return(
-                            <article key={i}>
-                                <div>
-                                    <img  className="recentPic" src={ele.thumbnail} alt="" />
-                                </div>
-                                <div className="contentWrapper">
-                                <div>
-                                    <h3>{ele.title}</h3>
-                                    <p className="contentPara">{ele.short_description}</p>
-                                    {/* <Link to={`details`}>Read More</Link> */}
-                                </div>             
-                                
-                                <div className="contentBottom">
-                                    {(() => {
-                                        if(ele.platform == "PC (Windows)"){
-                                            return(
-                                                <div>
-                                                    <img src={WindowsImg} alt="windowsImg" />
-                                                </div>
-                                            )
-                                        } else if(ele.platform == "Web Browser"){
-                                            return(
-                                                <div>
-                                                    <img src={BrowerImg} alt="browserImg" />
-                                                </div>
-                                            )
-                                        }
-                                    })()}
-                                    <p>
-                                        {ele.genre}
-                                    </p>
-                                </div>
-                                </div>
-                            </article>
+                    {recent.map((ele, i) => {
+                        return (
+                            <GeneralCard key={i}
+                                thumbnail={ele.thumbnail}
+                                title={ele.title}
+                                short_description={ele.short_description}
+                                platform={ele.platform}
+                                genre={ele.genre}
+                            />
                         )
                     })}
                 </article>
