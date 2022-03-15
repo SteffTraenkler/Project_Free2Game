@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react"
 import '../Components/home.css'
 import GeneralCard from "./props/generalProps"
+import Top4GamesCard from "./props/top4games"
+
 
 
 export default function Home() {
 
     const [recent, setRecent] = useState([])
+    const [topgames, setTopgames] = useState([])
 
     let x
 
@@ -22,6 +25,19 @@ export default function Home() {
                 console.log(newRecentArr);
                 setRecent(newRecentArr)
 
+            })
+    }, [x])
+
+    useEffect(() =>{
+        let newTopgamesArr = []
+
+        fetch('https://www.freetogame.com/api/games?sort-by=popularity')
+            .then(respone => respone.json())
+            .then(json =>{
+                console.log(json);
+                newTopgamesArr = json.splice(0,4)
+                console.log(newTopgamesArr);
+                setTopgames(newTopgamesArr)
             })
     }, [x])
 
@@ -49,6 +65,23 @@ export default function Home() {
                     })}
                 </article>
             </section>
+            <section className="sectionTopgames">
+                <h2>Top 4 Games for PC in June 2021</h2>
+                <article>
+                    {topgames.map((elem, j) =>{
+                        return(
+                            <Top4GamesCard key={j}
+                                thumbnail={elem.thumbnail}
+                                title={elem.title}
+                                short_description={elem.short_description}
+                                platform={elem.platform}
+                                genre={elem.genre}
+                            />
+                        )
+                    })}
+                </article>
+            </section>
+
         </main>
     )
 }
