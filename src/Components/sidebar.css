@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 aside {
     position: fixed;
     top: 0;
@@ -6,6 +7,8 @@ aside {
     width: 4.5rem;
     height: 100vh;
     background-color: #040F14;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.1em;
 }
 
 .img {

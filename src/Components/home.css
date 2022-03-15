@@ -1,14 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
 .sectionHero {
     background: url(../img/Hero.png) no-repeat center/cover;
     height: 70vh;
     margin: 4rem 0 0 4rem;
+    font-family: 'Oswald', sans-serif;
 }
 
 .sectionHero h1 {
     font-size: 3rem;
     color: white;
-    width: 25%;
+    width: 40%;
     padding: 25rem 0 0 5rem;
+    
 }
 
 .sectionRecently {
@@ -23,6 +28,7 @@
 
 .sectionRecently h2 {
     margin: 8rem 0 2rem 0;
+    font-family: 'Oswald', sans-serif;
 }
 
 .sectionRecently article {
@@ -30,6 +36,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2rem;
     border-radius: 2rem;
+    font-family: 'Oswald', sans-serif;
     /* flex-wrap: wrap;
     width: 80%; */
 }
@@ -46,6 +53,7 @@
 
 .contentPara {
     line-height: 2rem;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .contentBottom {
