@@ -1,0 +1,10 @@
+.sectionTop4Games {
+    /* display: grid;
+    grid-template-columns: 1fr 2fr; */
+    display: flex;
+    margin-left: 10rem;
+}
+
+.sectionTop4Games:nth-of-type(1) {
+    /* background-image: url(${props.thumbnail}); */
+}

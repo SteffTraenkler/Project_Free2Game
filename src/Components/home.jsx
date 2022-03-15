@@ -30,8 +30,10 @@ export default function Home() {
 
     useEffect(() =>{
         let newTopgamesArr = []
+        
+        //Wenn möglich Datum noch anpassen im fatch
 
-        fetch('https://www.freetogame.com/api/games?sort-by=popularity')
+        fetch('https://www.freetogame.com/api/games?platform=pc&sort-by=release-date&sort-by=popularity')
             .then(respone => respone.json())
             .then(json =>{
                 console.log(json);
