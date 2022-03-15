@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
-
+*::-webkit-scrollbar {
+    display: none;
+}
 input[type=submit] {
     position: fixed;
     right: 30px;
@@ -29,4 +31,48 @@ input[type=text] {
 
 .hallo {
     position: relative;
+}
+.gameResult{
+    overflow: hidden;
+    position: absolute;
+    background-color: #f6f6f670;
+    min-width: 230px;
+    border-radius: 50px;
+    max-width: 60vw;
+    overflow: auto;
+    border: none;
+    z-index: 1;
+    top: 0;
+    right: 0;
+}
+.test{
+    display: flex;
+    color: #040F14;
+    border-bottom: 15px solid transparent;
+}
+.link{
+    text-decoration:unset;
+}
+.flex{
+    line-height: 0;
+    width: 30vw;
+}
+.wrap{
+    width: 20vw;
+    color: antiquewhite;
+    background: linear-gradient(90deg, rgba(168,29,29,1) 0%, rgba(96,75,84,1) 100%);
+}
+.wrap h2{
+    font-size: 2em;
+    color: antiquewhite;
+}
+.wrap p{
+    font-size: .9em;
+}
+.bild{
+    text-align: left;
+    width: 100%;
+}
+.gameResult {
+    text-align: center;
 }

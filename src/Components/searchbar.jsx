@@ -38,15 +38,15 @@ export default function Searchbar() {
             </form>
             <div>
                 <div className='gameResult'>
-                    {filterGames.slice(0.15).map((value, key) => {
+                    {filterGames.map((value, key) => {
                         return (
-                            <Link key={key} to='/details{value.id}'>
-                                <article>
-                                    <div><img src={value.thumbnail} alt="" /></div>
-                                    <h2>{value.title}</h2>
-                                    <h3>{value.short_description}</h3>
-                                    <div>
-                                        <h1>{value.id}</h1>
+                            <Link className='link' key={key} to='/details{value.id}'>
+                                <article className='test'>
+                                    <div className='flex'>
+                                    <div><img className='bild' src={value.thumbnail} alt="" /></div>
+                                    </div>
+                                    <div className='wrap'>
+                                        <h2>{value.title}</h2>
                                         <p>Platform: {value.platform}</p>
                                         <p>Genre: {value.genre}</p>
                                         <p>Developer: {value.developer}</p>
