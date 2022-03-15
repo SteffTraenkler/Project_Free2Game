@@ -26,7 +26,7 @@ input[type=text] {
     font-family: 'Oswald', sans-serif;
     font-size: 1.3em;
     padding-left: 20px;
-    
+    z-index: 1;
 }
 
 .hallo {
@@ -39,9 +39,7 @@ input[type=text] {
     min-width: 230px;
     border-radius: 50px;
     max-width: 60vw;
-    overflow: auto;
     border: none;
-    z-index: 1;
     top: 0;
     right: 0;
 }
