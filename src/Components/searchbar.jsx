@@ -1,11 +1,29 @@
 import { useState } from 'react';
-import Search from '../img/Search.png'
+import { Link } from 'react-router-dom';
+import allG from '../Components/data/allgames.json'
 
 export default function Searchbar() {
     const [suche, setSuche] = useState("")
+    const [filterGames, setFilterGames] = useState([])
+
 
     const handleSubmit = (evt) => {
         console.log('submitbutton');
+    }
+
+    const handleChange = (e) => {
+        const searchedWord = e.target.value;
+        setSuche(searchedWord);
+        const nFilter = allG.filter((value) => {
+            return value.title.toLowerCase().includes(searchedWord.toLowerCase())
+        });
+
+        if (searchedWord === "") {
+            setFilterGames([])
+        } else {
+            setFilterGames(nFilter)
+        }
+
     }
 
     return (
@@ -14,11 +32,34 @@ export default function Searchbar() {
                 <input
                     type="text"
                     value={suche}
-                    onChange={e => setSuche(e.target.value)}
+                    onChange={handleChange}
                 />
                 <input type="submit" value='' />
-
             </form>
+            <div>
+                <div className='gameResult'>
+                    {filterGames.slice(0.15).map((value, key) => {
+                        return (
+                            <Link key={key} to='/details{value.id}'>
+                                <article>
+                                    <div><img src={value.thumbnail} alt="" /></div>
+                                    <h2>{value.title}</h2>
+                                    <h3>{value.short_description}</h3>
+                                    <div>
+                                        <h1>{value.id}</h1>
+                                        <p>Platform: {value.platform}</p>
+                                        <p>Genre: {value.genre}</p>
+                                        <p>Developer: {value.developer}</p>
+                                        <p>Publisher: {value.publisher}</p>
+                                    </div>
+                                </article>
+                            </Link>
+                        )
+                    })}
+                </div>
+            </div>
         </section >
     )
+
+
 }
