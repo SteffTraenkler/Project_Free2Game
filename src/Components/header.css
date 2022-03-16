@@ -12,6 +12,7 @@ input[type=submit] {
     height: 25px;
     width: 25px;
     cursor: pointer;
+    z-index: 2;
 }
 
 input[type=text] {
