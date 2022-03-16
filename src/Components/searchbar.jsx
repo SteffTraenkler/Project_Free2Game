@@ -40,7 +40,7 @@ export default function Searchbar() {
                 <div className='gameResult'>
                     {filterGames.map((value, key) => {
                         return (
-                            <Link className='link' key={key} to='/details{value.id}'>
+                            <Link className='link' key={key} to={`/details/${value.id}`}>
                                 <article className='test'>
                                     <div className='flex'>
                                     <div><img className='bild' src={value.thumbnail} alt="" /></div>
