@@ -104,12 +104,13 @@ aside {
 
 li {
     list-style: none;
+    margin-top: 50px;
 }
 
 section ul li a {
     display: flex;
+    align-items: center;
     gap: 20px;
-    margin-bottom: 50px;
     text-decoration: unset;
     color: #fff;
 }
@@ -118,6 +119,19 @@ ul {
     padding: 20rem 20px;
 }
 
+ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.active{
+    background-color: #FF4654; 
+    border: 1px solid #FF4654;
+    border-width: 3px;
+    color: #fff;
+    border-radius: 12px;
+}
 
 /* .menu {
     z-index: -1;
