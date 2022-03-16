@@ -7,7 +7,7 @@ const GeneralCard = (props) => {
     return (
         <article>
             <div>
-                <img className="recentPic" src={props.thumbnail} alt="" />
+                <img className="recentPic" src={props.thumbnail} alt={"Thumbnail of " + (props.title)} />
             </div>
             <div className="contentWrapper">
                 <div>

@@ -6,16 +6,19 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Details from './Components/details';
 import Added from './Components/recentlyadded';
+import Home from './Components/home';
 import AllGames from './Components/allgames';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/details/:id" element={<Details />} />
-        <Route path="/Added" element={<Added />} />
-        <Route path="/allgames" element={<AllGames />} />
+        <Route path="/" element={<App />}>
+          <Route path='/allgames' element={<AllGames />} />
+          <Route index element={<Home />} />
+          <Route path="/details/:id" element={<Details />} />
+          <Route path="/Added" element={<Added />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,

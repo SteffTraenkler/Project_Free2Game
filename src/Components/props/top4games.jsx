@@ -8,7 +8,7 @@ const Top4GamesCard = (props) => {
 
         <article>
             <div>
-                <img className="top4pic" src={props.thumbnail} alt="" />
+                <img className="top4pic" src={props.thumbnail} alt={"Thumbnail of " + (props.title)} />
             </div>
             <div className="top4div">
                 <div>

@@ -43,7 +43,7 @@ export default function Searchbar() {
                             <Link className='link' key={key} to={`/details/${value.id}`}>
                                 <article className='test'>
                                     <div className='flex'>
-                                    <div><img className='bild' src={value.thumbnail} alt="" /></div>
+                                        <div><img className='bild' src={value.thumbnail} alt={"Thumbnail of " + (value.title)} /></div>
                                     </div>
                                     <div className='wrap'>
                                         <h2>{value.title}</h2>

@@ -6,34 +6,20 @@ import '../Components/props/topBrowser.css'
 import GeneralCard from "./props/generalProps"
 import Top4GamesCard from "./props/top4games"
 import TopBrowser from "./props/topBroswer"
+import { useOutletContext } from "react-router-dom";
 
 
 
 export default function Home() {
-
-    const [recent, setRecent] = useState([])
     const [topgames, setTopgames] = useState([])
     const [topbroswer, setTopBrowser] = useState([])
+    const [fetchAllAndRecent, setFetchAllAndRecent] = useOutletContext();
 
     let x
+    console.log(fetchAllAndRecent);
 
     useEffect(() => {
-        let newRecentArr = []
-
-        // let loaded = true //für user um das er nicht zu dolle klicken
-
-        fetch('https://www.freetogame.com/api/games?sort-by=release-date')
-            .then(respone => respone.json())
-            .then(json => {
-                console.log(json);
-                newRecentArr = json.splice(0, 4)
-                console.log(newRecentArr);
-                setRecent(newRecentArr)
-
-            })
-    }, [x])
-
-    useEffect(() => {
+        let loaded = true
         let newTopgamesArr = []
 
         //Wenn möglich Datum noch anpassen im fatch
@@ -41,14 +27,21 @@ export default function Home() {
         fetch('https://www.freetogame.com/api/games?platform=pc&sort-by=release-date&sort-by=popularity')
             .then(respone => respone.json())
             .then(json => {
-                console.log(json);
-                newTopgamesArr = json.splice(0, 4)
-                console.log(newTopgamesArr);
-                setTopgames(newTopgamesArr)
+                if (loaded) {
+                    console.log(json);
+                    newTopgamesArr = json.splice(0, 4)
+                    console.log(newTopgamesArr);
+                    setTopgames(newTopgamesArr)
+                    console.log('Top4PC Inhalte wurden neu gerendert');
+                } return () => {
+                    loaded = false;
+                    console.log('fetch Top4PC closed');
+                }
             })
     }, [x])
 
     useEffect(() => {
+        let loaded = true
         let newTopBrowserArr = []
 
         // let loaded = true //für user um das er nicht zu dolle klicken
@@ -56,10 +49,16 @@ export default function Home() {
         fetch('https://www.freetogame.com/api/games?platform=browser&sort-by=release-date&sort-by=popularity')
             .then(respone => respone.json())
             .then(json => {
-                console.log(json);
-                newTopBrowserArr = json.splice(0, 4)
-                console.log(newTopBrowserArr);
-                setTopBrowser(newTopBrowserArr)
+                if (loaded) {
+                    console.log(json);
+                    newTopBrowserArr = json.splice(0, 4)
+                    console.log(newTopBrowserArr);
+                    setTopBrowser(newTopBrowserArr);
+                    console.log('Top4Browser Inhalte wurden neu gerendert');
+                } return () => {
+                    loaded = false;
+                    console.log('fetch Top4Browser closed');
+                }
 
             })
     }, [x])
@@ -75,7 +74,7 @@ export default function Home() {
             <section className="sectionRecently">
                 <h2>Recently Added</h2>
                 <article>
-                    {recent.map((ele, i) => {
+                    {fetchAllAndRecent.slice(0, 4).map((ele, i) => {
                         return (
                             <GeneralCard key={i}
                                 thumbnail={ele.thumbnail}
