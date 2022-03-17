@@ -2,9 +2,6 @@ import { useEffect } from "react"
 import { useState } from "react"
 import { useParams } from "react-router-dom"
 import "../Components/details.css"
-import Header from "./header"
-import Searchbar from "./searchbar"
-import Sidebar from "./sidebar"
 
 export default function Details() {
     let loaded = true
@@ -32,9 +29,6 @@ export default function Details() {
 
     return (
         <main className="detailMain">
-            <Header />
-            <Searchbar />
-            <Sidebar />
             <section className="detailHero">
                 <div><img src={screenShot[0].image} alt={"Hero Pic of " + (gameDetail.title)} /></div>
             </section>

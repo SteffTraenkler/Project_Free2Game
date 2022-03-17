@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react"
-import Header from "./header";
 import GeneralCard from "./props/generalProps";
-import Searchbar from "./searchbar";
-import Sidebar from "./sidebar";
 import '../Components/allgames.css'
 import allG from '../Components/data/allgames.json'
 
@@ -42,9 +39,6 @@ export default function AllGames() {
 
     return (
         <main>
-            <Header />
-            <Searchbar />
-            <Sidebar />
             <section className="allgamesHero">
                 <article>
                     <h1>ALL GAMES</h1>

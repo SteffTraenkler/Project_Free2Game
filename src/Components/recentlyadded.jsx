@@ -1,9 +1,5 @@
-import { useState, useEffect } from "react"
 import GeneralCard from "./props/generalProps"
-import Searchbar from './searchbar'
-import Sidebar from "./sidebar"
 import "../Components/recentlyadded.css"
-import Header from "./header"
 import { useOutletContext } from "react-router-dom";
 
 export default function Added() {
@@ -12,9 +8,6 @@ export default function Added() {
     return (
 
         <main>
-            <Header />
-            <Searchbar />
-            <Sidebar />
             <section className="secHero">
                 <article>
                     <h1>RECENTLY ADDED</h1>
