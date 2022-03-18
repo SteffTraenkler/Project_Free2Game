@@ -162,3 +162,132 @@ ul li a{
     display: block;
     margin-bottom: 100px;
 } */
+@media screen and (max-width: 375px) {
+    .menuNav {
+        position: fixed;
+        bottom: 10px;
+        background-color: lime;
+    }
+    
+    /* .img {
+        position: fixed;
+        padding: 1rem 0 0 2rem;
+    }
+    
+    .logoClose {
+        position: absolute;
+        top: 0;
+        margin-left: 60px;
+    }
+    
+    .logoOpen {
+        position: absolute;
+        top: 0;
+        
+    }
+    
+    .hideText {
+        display: none;
+    }
+    
+    .showText {
+        display: unset;
+    }
+    
+    .showMenu {
+        width: 200px;
+    }
+    
+    .burger {
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+        margin: 20px 25px;
+        overflow: visible;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .burger span,
+    .burger span::before,
+    .burger span::after {
+        background: #fff;
+        display: block;
+        height: 2px;
+        opacity: 1;
+        position: absolute;
+        transition: .4s ease-in;
+    }
+    
+    .burger span::before,
+    .burger span::after {
+        content: "";
+    }
+    /*
+    .burger span {
+        top: 0;
+        top: 13px;
+        width: 20px;
+    }
+    
+    .burger span::before {
+        top: -10px;
+        width: 20px;
+    }
+    
+    .burger span::after {
+        top: 10px;
+        width: 20px;
+    }
+    
+    .burger.close span {
+        transform: rotate(-45deg);
+        top: 13px;
+        width: 25px;
+    }
+    
+    .burger.close span::before {
+        top: 0;
+        transform: rotate(90deg);
+        width: 25px;
+    }
+    
+    .burger.close span::after {
+        top: 0;
+        left: 0;
+        transform: rotate(90deg);
+        opacity: 0;
+        width: 0;
+    }
+    
+    li {
+        list-style: none;
+        margin-top: 50px;
+    }
+    
+    section ul li a {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        text-decoration: unset;
+        color: #fff;
+    }
+    
+    ul {
+        padding: 20rem 20px;
+    }
+    
+    ul li a{
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    
+    .active{
+        background-color: #FF4654; 
+        border: 1px solid #FF4654;
+        border-width: 3px;
+        color: #fff;
+        border-radius: 12px;
+    } */
+}

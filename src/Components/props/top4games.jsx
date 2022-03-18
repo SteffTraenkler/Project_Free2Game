@@ -21,21 +21,23 @@ const Top4GamesCard = (props) => {
                     {(() => {
                         if (props.platform == "PC (Windows)") {
                             return (
-                                <div className='windows'>
+                                <div className='windows animated-box in'>
                                     <img src={WindowsImg} alt="windowsImg" />
                                 </div>
                             )
                         } else if (props.platform == "Web Browser") {
                             return (
-                                <div className='browser'>
+                                <div className='browser animated-box in'>
                                     <img src={BrowerImg} alt="browserImg" />
                                 </div>
                             )
                         }
                     })()}
-                    <p>
-                        {props.genre}
-                    </p>
+                    <div className='animated-box in'>
+                        <p>
+                            {props.genre}
+                        </p>
+                    </div>
                 </div>
             </div>
             <div className='testKey'>{props.counter}</div>

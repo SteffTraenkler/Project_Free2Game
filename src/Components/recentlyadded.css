@@ -68,11 +68,11 @@ body {
     padding: 20px 10px;
 }
 
-.contentBottom p {
+/* .contentBottom p {
     padding: 15px;
     border: 1px solid #FF4654;
     border-radius: 15px;
-}
+} */
 
 .readMore {
     border: 1px solid #FF4654;
@@ -90,7 +90,6 @@ body {
 .windows img {
     padding: 15px;
     width: 45%;
-    border: 1px solid #FF4654;
-    border-radius: 20px;
+    border-radius: 5px;
     margin: 16px 10px 0 0;
 }

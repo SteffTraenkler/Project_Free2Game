@@ -16,7 +16,7 @@ body {
 }
 .artGameDescription{
     display: flex;
-    gap: 15vw;
+    gap: 10vw;
 }
 .gameDetail{
     margin-left: 10vw;
@@ -33,31 +33,33 @@ body {
 .genreDetailDiv{
     margin-left: 20px;
     margin-bottom: 50px;
-    line-height: 0;
-    width: 30%;
-    border: 1px solid #FF4654;
-    border-radius: 15px;
-    background-color: #102130;
+    line-height: 0px;
+    width: 6vw;
+    height: 5vw;
+    border-radius: 5px;
 }
 .genreDetail{
-    margin-left: 20px;
-    font-size: .9em;
+    padding: 3vh 0;
+    text-align: center;
 }
 .gameDetail a{
     border: 1px solid #FF4654;
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 10px 5px;
     color: #fff;
     background-color: #FF4654;
     text-decoration: unset;
     margin-left:20px;
-    
+    cursor: url('../img/joystick_silver.png'), auto;
 }
 .aboutSec{
     margin-top: 5vw;
+    margin-right: 15vw;
+    padding: 2em;
+    z-index: 1;
 }
 .detailDescription{
-    width: 40%;
+    width: 85%;
     font-size: .9em;
     font-family: 'Titillium Web', sans-serif;
 }

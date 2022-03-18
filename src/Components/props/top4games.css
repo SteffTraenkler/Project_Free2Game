@@ -31,8 +31,7 @@
 
 .top4bottom p {
     padding: 15px;
-    border: 1px solid red;
-    border-radius: 15px;
+    border-radius: 5px;
 }
 
 .top4pic {
@@ -59,14 +58,15 @@
 }
 
 
+
 /*---Out ----*/
 
 .sectionTop4Games article:nth-of-type(1) {
     position: absolute;
     top: 2.5rem;
     left: 0;
-    z-index: -1;
-    width: 40%;
+    z-index: 1;
+    width: 38%;
     height: 90%;
     /* padding: 18%; */
     background: url('../../img/dragon.png') no-repeat center/cover;
@@ -85,11 +85,11 @@
 }
 
 .sectionTop4Games article:nth-of-type(1) .top4bottom .windows img {
-    background-color: black;
+    background-color: #102130;
 }
 
 .sectionTop4Games article:nth-of-type(1) .top4bottom p {
-    background-color: black;
+    background-color: #102130;
 }
 
 .sectionTop4Games article:nth-of-type(1) .testKey {

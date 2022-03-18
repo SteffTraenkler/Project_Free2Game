@@ -16,8 +16,8 @@ export default function Sidebar() {
     }
 
     return (
-        <>
-            <div>
+
+            <div className="vertical">
                 <Link to='/'><div className={`menuNav ${navbarOpen ? "logoClose" : "logoOpen"}`}><img className="img" src={Logo} alt="Logo Free2Game" /></div></Link>
                 <aside className={`menuNav ${navbarOpen ? " " : "showMenu"}`}>
                     <section onClick={handleToggle} className={navbarOpen ? "burger" : "burger close"} >
@@ -32,6 +32,6 @@ export default function Sidebar() {
                     </section>
                 </aside>
             </div>
-        </>
+
     )
 }

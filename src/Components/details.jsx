@@ -34,16 +34,16 @@ export default function Details() {
             </section>
             <section className="articleDetail">
                 <article className="artGameDescription">
-                    <div className="gameDetail">
+                    <div className="gameDetail ">
                         <h2>{gameDetail.title}</h2>
                         <div><img src={gameDetail.thumbnail} alt={"Thumbnail of " + (gameDetail.title)} /></div>
                         <h3>Platform: {gameDetail.platform}</h3>
-                        <div className="genreDetailDiv">
+                        <div className="genreDetailDiv animated-box in">
                             <p className="genreDetail">{gameDetail.genre}</p>
                         </div>
-                        <a href={gameDetail.game_url} target="_blank" rel='noopener noreferrer'>PLAY NOW</a>
+                        <a className="readMore" href={gameDetail.game_url} target="_blank" rel='noopener noreferrer'>PLAY NOW</a>
                     </div>
-                    <div className="aboutSec">
+                    <div className="aboutSec animated-box in">
                         <h2>About</h2>
                         <p className='detailDescription'>{gameDetail.description}</p>
                     </div>
