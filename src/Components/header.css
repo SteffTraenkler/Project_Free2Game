@@ -48,6 +48,7 @@ input[type=text] {
     top: 0;
     right: 0;
     z-index: 2;
+    text-align: center;
 }
 .test{
     display: flex;
@@ -80,7 +81,4 @@ input[type=text] {
 .bild{
     text-align: left;
     width: 100%;
-}
-.gameResult {
-    text-align: center;
 }
