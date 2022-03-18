@@ -1,0 +1,182 @@
+[
+    {
+        "id": "2d",
+        "genre": "2d"
+    },
+    {
+        "id": "3d",
+        "genre": "3d"
+    },
+    {
+        "id": "action",
+        "genre": "action"
+    },
+    {
+        "id": "action-rpg",
+        "genre": "action-rpg"
+    },
+    {
+        "id": "anime",
+        "genre": "anime"
+    },
+    {
+        "id": "battle-royale",
+        "genre": "battle-royale"
+    },
+    {
+        "id": "card",
+        "genre": "card"
+    },
+    {
+        "id": "fantasy",
+        "genre": "fantasy"
+    },
+    {
+        "id": "fighting",
+        "genre": "fighting"
+    },
+    {
+        "id": "first-person",
+        "genre": "first-person"
+    },
+    {
+        "id": "flight",
+        "genre": "flight"
+    },
+    {
+        "id": "horror",
+        "genre": "horror"
+    },
+    {
+        "id": "low-spec",
+        "genre": "low-spec"
+    },
+    {
+        "id": "martial-arts",
+        "genre": "martial-arts"
+    },
+    {
+        "id": "military",
+        "genre": "military"
+    },
+    {
+        "id": "mmo",
+        "genre": "mmo"
+    },
+    {
+        "id": "mmofps",
+        "genre": "mmofps"
+    },
+    {
+        "id": "mmorpg",
+        "genre": "mmorpg"
+    },
+    {
+        "id": "mmorts",
+        "genre": "mmorts"
+    },
+    {
+        "id": "mmotps",
+        "genre": "mmotps"
+    },
+    {
+        "id": "moba",
+        "genre": "moba"
+    },
+    {
+        "id": "open-world",
+        "genre": "open-world"
+    },
+    {
+        "id": "permadeath",
+        "genre": "permadeath"
+    },
+    {
+        "id": "pixel",
+        "genre": "pixel"
+    },
+    {
+        "id": "pve",
+        "genre": "pve"
+    },
+    {
+        "id": "pvp",
+        "genre": "pvp"
+    },
+    {
+        "id": "racing",
+        "genre": "racing"
+    },
+    {
+        "id": "sailing",
+        "genre": "sailing"
+    },
+    {
+        "id": "sandbox",
+        "genre": "sandbox"
+    },
+    {
+        "id": "sci-fi",
+        "genre": "sci-fi"
+    },
+    {
+        "id": "shooter",
+        "genre": "shooter"
+    },
+    {
+        "id": "side-scroller",
+        "genre": "side-scroller"
+    },
+    {
+        "id": "social",
+        "genre": "social"
+    },
+    {
+        "id": "space",
+        "genre": "space"
+    },
+    {
+        "id": "sports",
+        "genre": "sports"
+    },
+    {
+        "id": "strategy",
+        "genre": "strategy"
+    },
+    {
+        "id": "superhero",
+        "genre": "superhero"
+    },
+    {
+        "id": "survival",
+        "genre": "survival"
+    },
+    {
+        "id": "tank",
+        "genre": "tank"
+    },
+    {
+        "id": "third-Person",
+        "genre": "third-Person"
+    },
+    {
+        "id": "top-down",
+        "genre": "top-down"
+    },
+    {
+        "id": "tower-defense",
+        "genre": "tower-defense"
+    },
+    {
+        "id": "turn-based",
+        "genre": "turn-based"
+    },
+    {
+        "id": "voxel",
+        "genre": "voxel"
+    },
+    {
+        "id": "zombie",
+        "genre": "zombie"
+    }
+]
