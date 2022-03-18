@@ -230,19 +230,25 @@ export default function AllGames() {
                 </article>
             </section>
             <div className="selection">
-                <form className="platformsCheck">
+                <h3>Hallo</h3>
+                <form className="platforms-Check">
+                    <ul className="platforms-Check-list">
+                        <li>
                     <input type="radio" value="all" id="all" onChange={handlePlatformChange} name="platform"
                     />
                     <label htmlFor="all">All Platforms</label>
-
+                    </li>
+                    <li>
                     <input type="radio" value="pc" id="pc" onChange={handlePlatformChange} name="platform"
                     />
                     <label htmlFor="pc">Windows(PC)</label>
-
+                    </li>
+                    <li>
                     <input type="radio" value="browser" id="browser" onChange={handlePlatformChange} name="platform"
                     />
                     <label htmlFor="browser">Browser(Web)</label>
-
+                    </li>
+                    </ul>
                 </form>
                 <form className="categoriesCheck">
                     {Categories.map((item, key, index) => (
