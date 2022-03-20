@@ -45,7 +45,17 @@ export default function AllGames() {
     }
     console.log(sortSelect);
 
-    const handleOnClick = even => {
+    const handlePlatformOnClick = even => {  //Click for toggle of Platform to displayn options
+        setActive(!isActive);
+        even.stopPropagation()
+    }
+
+    const handleCategorOnClick = even => {  //Click for toggle of Categories to displayn options
+        setActive(!isActive);
+        even.stopPropagation()
+    }
+
+    const handleSortOnClick = even => {  //Click for toggle of Sort to displayn options
         setActive(!isActive);
         even.stopPropagation()
     }
@@ -239,9 +249,9 @@ export default function AllGames() {
             </section>
             <div className="selection">
 
-                <div className={isActive ? 'platforms-Check handlePlatformChange' : 'platforms-Check'} onClick={handleOnClick}>
+                <div className={isActive ? 'platforms-Check handlePlatformChange' : 'platforms-Check'} onClick={handlePlatformOnClick}>
                     <h3>PLATFORM</h3>
-                    <ul className="platforms-Check-list" onClick={handleOnClick}>
+                    <ul className="platforms-Check-list" onClick={handlePlatformOnClick}>
                         <li>
                             <input type="radio" value="all" id="all" onChange={handlePlatformChange} name="platform"
                             />
@@ -259,10 +269,10 @@ export default function AllGames() {
                         </li>
                     </ul>
                 </div>
-                <div className={isActive ? 'categor-Check handleCategorChange' : 'categor-Check'} onClick={handleOnClick}>
+                <div className={isActive ? 'categor-Check handleCategorChange' : 'categor-Check'} onClick={handleCategorOnClick}>
                     <h3>GENRE/TAG</h3>
                     {Categories.map((item, key) => (
-                        <ul key={key} className="categor-Check-list" onClick={handleOnClick}>
+                        <ul key={key} className="categor-Check-list" onClick={handleCategorOnClick}>
                             <li>
                                 <input
                                     id={item.id}
@@ -277,9 +287,9 @@ export default function AllGames() {
                         </ul>
                     ))}
                 </div>
-                <div className={isActive ? 'sort-Check handleSortChange' : 'sort-Check'} onClick={handleOnClick}>
+                <div className={isActive ? 'sort-Check handleSortChange' : 'sort-Check'} onClick={handleSortOnClick}>
                     <h3>SORT BY</h3>
-                    <ul className="sort-Check-list" onClick={handleOnClick}>
+                    <ul className="sort-Check-list" onClick={handleSortOnClick}>
 
                         <li>
                             <input type="radio" value="relevance" id="relevance" onChange={handleSortingChange} name="sorting"
