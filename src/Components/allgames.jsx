@@ -15,16 +15,7 @@ export default function AllGames() {
     const [isActiveCategor, setActiveCategor] = useState(false)
     const [isActiveSort, setActiveSort] = useState(false)
 
-    // let loaded
-    // let selectedTags
-    // let newneededArr
-
-    // console.log(selected);
-    // console.log(platformSelect);
-    // console.log(sortSelect);
-    // console.log(recent);
-
-
+    //functions for getting values to filter
     const handleChange = event => {
         const { checked, value } = event.currentTarget;
 
