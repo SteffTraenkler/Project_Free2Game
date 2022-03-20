@@ -94,6 +94,16 @@ body {
     border-radius: 5px;
     margin: 16px 10px 0 0;
 }
+.browser {
+    margin: 0 10px;
+}
+
+.browser img {
+    padding: 15px;
+    width: 45%;
+    border-radius: 5px;
+    margin: 16px 10px 0 0;
+}
 
 @media screen and (max-width: 375px) {
     .secHero {
