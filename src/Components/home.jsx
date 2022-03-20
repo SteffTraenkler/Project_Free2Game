@@ -13,7 +13,7 @@ import { useOutletContext } from "react-router-dom";
 export default function Home() {
     const [topgames, setTopgames] = useState([])
     const [topbroswer, setTopBrowser] = useState([])
-    const [fetchAllAndRecent, setFetchAllAndRecent] = useOutletContext();
+    const [fetchAllAndRecent] = useOutletContext();  //Netlify will keine Funktion die unbenutzt ist in diesem useState!
 
     let x
     console.log(fetchAllAndRecent);

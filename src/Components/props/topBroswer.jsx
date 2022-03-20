@@ -18,24 +18,31 @@ const TopBrowser = (props) => {
 
                 <div className="contentBottom">
                     {(() => {
-                        if (props.platform == "PC (Windows)") {
+                        if (props.platform === "PC (Windows)") {
                             return (
                                 <div className='windows animated-box in'>
                                     <img src={WindowsImg} alt="windowsImg" />
                                 </div>
                             )
-                        } else if (props.platform == "Web Browser") {
+                        } else if (props.platform === "Web Browser") {
                             return (
                                 <div className='windows animated-box in'>
                                     <img src={BrowerImg} alt="browserImg" />
                                 </div>
                             )
+                        } else if (props.platform === "PC (Windows), Web Browser" && props.platform === "Web Browser, PC (Windows)") {
+                            return (
+                                <div className='browser windows animated-box in'>
+                                    <img src={BrowerImg} alt="browserImg" />
+                                    <img src={WindowsImg} alt="windowsImg" />
+                                </div>
+                            )
                         }
                     })()}
                     <div className='animated-box in'>
-                    <p>
-                        {props.genre}
-                    </p>
+                        <p>
+                            {props.genre}
+                        </p>
                     </div>
                 </div>
             </div>

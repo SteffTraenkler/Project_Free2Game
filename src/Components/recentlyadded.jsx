@@ -3,7 +3,7 @@ import "../Components/recentlyadded.css"
 import { useOutletContext } from "react-router-dom";
 
 export default function Added() {
-    const [fetchAllAndRecent, setFetchAllAndRecent] = useOutletContext();
+    const [fetchAllAndRecent] = useOutletContext();
 
     return (
 
