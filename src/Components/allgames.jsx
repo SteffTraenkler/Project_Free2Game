@@ -278,9 +278,9 @@ export default function AllGames() {
                 </div>
                 <div className={isActiveCategor ? 'categor-Check handleCategorChange' : 'categor-Check'} onClick={handleCategorOnClick}>
                     <h3>GENRE/TAG</h3>
-                    {Categories.map((item, key) => (
-                        <ul key={key} className="categor-Check-list" onClick={handleCategorOnClick}>
-                            <li>
+                    <ul className="categor-Check-list" onClick={handleCategorOnClick}>
+                        {Categories.map((item, key) => (
+                            <li key={key}>
                                 <input
                                     id={item.id}
                                     value={item.id}
@@ -291,8 +291,8 @@ export default function AllGames() {
                                 />
                                 <label htmlFor={`custom-checkbox-${item.id}`}>{item.genre}</label>
                             </li>
-                        </ul>
-                    ))}
+                        ))}
+                    </ul>
                 </div>
                 <div className={isActiveSort ? 'sort-Check handleSortChange' : 'sort-Check'} onClick={handleSortOnClick}>
                     <h3>SORT BY</h3>
