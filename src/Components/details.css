@@ -160,6 +160,9 @@ body {
     .gameDetail {
         margin: 0;
     }
+    .gameDetail h2 {
+        padding-top: 6rem;
+    }
     .detailDescription {
         width: 100%;
     }
