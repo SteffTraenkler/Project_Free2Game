@@ -4,14 +4,13 @@ import { useParams } from "react-router-dom"
 import "../Components/details.css"
 
 export default function Details() {
-    let loaded
     let gameID = useParams('id')
 
     const [gameDetail, setGameDetail] = useState([])
     const [screenShot, setScreenshot] = useState(['1', '2', '3'])
 
     useEffect(() => {
-        loaded = true
+        let loaded = true
         fetch(`https://www.freetogame.com/api/game?id=${gameID.id}`)
             .then(resp => resp.json())
             .then(json => {

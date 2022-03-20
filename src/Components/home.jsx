@@ -16,13 +16,11 @@ export default function Home() {
     const [fetchAllAndRecent] = useOutletContext();  //Netlify will keine Funktion die unbenutzt ist in diesem useState!
 
     let x
-    let loaded
-    let newTopgamesArr
     console.log(fetchAllAndRecent);
 
     useEffect(() => {
-        loaded = true
-        newTopgamesArr = []
+        let loaded = true
+        let newTopgamesArr = []
 
         //Wenn möglich Datum noch anpassen im fatch
 
@@ -44,7 +42,7 @@ export default function Home() {
 
     useEffect(() => {
         let loaded = true
-        let newTopBrowserArr = []
+        newTopBrowserArr = []
 
         // let loaded = true //für user um das er nicht zu dolle klicken
 
