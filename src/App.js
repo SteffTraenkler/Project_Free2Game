@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [fetchAllAndRecent, setFetchAllAndRecent] = useState([])
-  const [fetchRecent, setFetchRecent] = useState([])
+  // const [fetchRecent, setFetchRecent] = useState([])
 
   let x
 
