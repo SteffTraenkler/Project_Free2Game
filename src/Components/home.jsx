@@ -42,7 +42,7 @@ export default function Home() {
 
     useEffect(() => {
         let loaded = true
-        newTopBrowserArr = []
+        let newTopBrowserArr = []
 
         // let loaded = true //für user um das er nicht zu dolle klicken
 
