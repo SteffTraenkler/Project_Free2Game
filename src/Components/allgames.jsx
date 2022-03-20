@@ -324,15 +324,15 @@ export default function AllGames() {
 
                     </ul>
                 </div>
-                <div>
-                    {selected.map((key) => {
-                        return (
-                            <div className="helloooMapp">
-                                <p>{key}</p>
-                            </div>)
-                    })}
-                </div>
             </div>
+            <section>
+                {selected.map((key) => {
+                    return (
+                        <div className="helloooMapp">
+                            <p>{key}</p>
+                        </div>)
+                })}
+            </section>
             <section className="secRecently">
                 {(() => {
                     if (error === true) {
