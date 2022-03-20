@@ -4,13 +4,14 @@ import { useParams } from "react-router-dom"
 import "../Components/details.css"
 
 export default function Details() {
-    let loaded = true
+    let loaded
     let gameID = useParams('id')
 
     const [gameDetail, setGameDetail] = useState([])
     const [screenShot, setScreenshot] = useState(['1', '2', '3'])
 
     useEffect(() => {
+        loaded = true
         fetch(`https://www.freetogame.com/api/game?id=${gameID.id}`)
             .then(resp => resp.json())
             .then(json => {
@@ -30,7 +31,15 @@ export default function Details() {
     return (
         <main className="detailMain">
             <section className="detailHero">
-                <div><img src={screenShot[0].image} alt={"Hero Pic of " + (gameDetail.title)} /></div>
+                {(() => {
+                    if (screenShot.length === 0) {
+                        return (
+                            null
+                        )
+                    } else if (screenShot.length > 0) {
+                        <div><img src={screenShot[0].image} alt={"Hero Pic of " + (gameDetail.title)} /></div>
+                    }
+                })()}
             </section>
             <section className="articleDetail">
                 <article className="artGameDescription">
@@ -50,8 +59,24 @@ export default function Details() {
                 </article>
                 <article className="artGameDetails">
                     <div className="detailsImgFlex">
-                        <div><img src={screenShot[1].image} alt={"Screenshot 1 of " + (gameDetail.title)} /></div>
-                        <div><img src={screenShot[2].image} alt={"Screenshot 2 of " + (gameDetail.title)} /></div>
+                        {(() => {
+                            if (screenShot.length < 1) {
+                                return (
+                                    null
+                                )
+                            } else if (screenShot.length > 1) {
+                                <div><img src={screenShot[1].image} alt={"Screenshot 1 of " + (gameDetail.title)} /></div>
+                            }
+                        })()}
+                        {(() => {
+                            if (screenShot.length < 2) {
+                                return (
+                                    null
+                                )
+                            } else if (screenShot.length > 2) {
+                                <div><img src={screenShot[2].image} alt={"Screenshot 2 of " + (gameDetail.title)} /></div>
+                            }
+                        })()}
                     </div>
                     <section className="lastFlex">
                         <article>
