@@ -36,8 +36,6 @@
     gap: 2rem;
     border-radius: 2rem;
     font-family: 'Oswald', sans-serif;
-    /* flex-wrap: wrap;
-    width: 80%; */
 }
 
 .sectionRecently article article {
@@ -200,6 +198,6 @@
     .sectionHero h1 {
         font-size: 2rem;
         color: white;
-        padding: 25rem 0 0 4rem;
+        padding: 22rem 0 0 4rem;
     }
 }

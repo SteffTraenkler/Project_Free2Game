@@ -77,7 +77,8 @@
     top: 40%;
     right: 30px;
 }
-.platforms-Check.handlePlatformChange::after{
+
+.platforms-Check.handlePlatformChange::after {
     transition: all .1s linear;
     transform: rotate(180deg);
     top: 60%;
@@ -107,7 +108,8 @@
     z-index: 1;
     /* avoid mouse click events inside the dropdown */
 }
-.platforms-Check-list li{
+
+.platforms-Check-list li {
     display: flex;
     border: 1px solid transparent;
     background-color: #375470;
@@ -127,10 +129,9 @@
 
 .platforms-Check-list li label {
     display: block;
-    
-
     transition: all 0.2s ease-out;
 }
+
 
 /* .platforms-Check-list li label:hover {
     background-color: #555;
@@ -147,24 +148,28 @@ label {
     -ms-user-select: none;
     user-select: none;
 }
-.customize-radio input[type = 'radio'] {
-        visibility: hidden;
-        position: absolute;
-        top: 6px;
+
+.customize-radio input[type='radio'] {
+    visibility: hidden;
+    position: absolute;
+    top: 6px;
 }
-.customize-radio input[type = 'radio'] ~ span {
-            cursor: pointer;
-            width: 15px;
-            height:15px;
-            display: inline-block;
-            background-size: 20px 31px;
-            background-repeat: no-repeat;
-            vertical-align: middle;
-            border: 3px solid lime;
+
+.customize-radio input[type='radio']~span {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background-size: 20px 31px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    border: 3px solid lime;
 }
-.customize-radio  input[type = 'radio']:checked ~ span.cross {
-background: url(https://www.freeiconspng.com/thumbs/x-png/x-png-15.png) no-repeat center/cover;
+
+.customize-radio input[type='radio']:checked~span.cross {
+    background: url(https://www.freeiconspng.com/thumbs/x-png/x-png-15.png) no-repeat center/cover;
 }
+
 
 /* Genre/Tag Ceckbox */
 
@@ -219,7 +224,7 @@ background: url(https://www.freeiconspng.com/thumbs/x-png/x-png-15.png) no-repea
     /* avoid mouse click events inside the dropdown */
 }
 
-.categor-Check-list li{
+.categor-Check-list li {
     display: flex;
     border: 1px solid transparent;
     background-color: #375470;
@@ -229,6 +234,7 @@ background: url(https://www.freeiconspng.com/thumbs/x-png/x-png-15.png) no-repea
     margin: 15px 5px 0 5px;
     z-index: 0;
 }
+
 .handleCategorChange .categor-Check-list {
     opacity: 1;
     /* display the dropdown */
@@ -238,7 +244,6 @@ background: url(https://www.freeiconspng.com/thumbs/x-png/x-png-15.png) no-repea
 
 .categor-Check-list li label {
     display: block;
-
     transition: all 0.2s ease-out;
 }
 
@@ -247,7 +252,9 @@ background: url(https://www.freeiconspng.com/thumbs/x-png/x-png-15.png) no-repea
     color: white;
 }
 
+
 /* SortBy Kategorie */
+
 .sort-Check {
     background-color: #FF4654;
     width: 15vh;
@@ -296,7 +303,8 @@ background: url(https://www.freeiconspng.com/thumbs/x-png/x-png-15.png) no-repea
     pointer-events: none;
     /* avoid mouse click events inside the dropdown */
 }
-.sort-Check-list li{
+
+.sort-Check-list li {
     display: flex;
     border: 1px solid transparent;
     background-color: #375470;
@@ -324,12 +332,13 @@ background: url(https://www.freeiconspng.com/thumbs/x-png/x-png-15.png) no-repea
     color: white;
 }
 
-.helloooMapp{
-    margin:2vw 0 0 12vw;
+.helloooMapp {
+    margin: 2vw 0 0 12vw;
     display: flex;
     gap: 2vw;
 }
-.helloooMapp div{
+
+.helloooMapp div {
     border: 1px solid #FF4654;
     border-radius: 15px;
     padding: 0 1vw;
@@ -351,5 +360,16 @@ background: url(https://www.freeiconspng.com/thumbs/x-png/x-png-15.png) no-repea
         margin: 0px 0rem 8rem 0rem;
         border-radius: 2rem;
         font-family: 'Oswald', sans-serif;
+    }
+    .selection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .platforms-Check {
+        margin: 0;
+    }
+    .categor-Check {
+        margin: 1rem 0;
     }
 }

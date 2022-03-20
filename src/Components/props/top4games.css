@@ -7,7 +7,6 @@
 }
 
 .sectionTop4Games {
-    /* position: relative; */
     margin-left: 40%;
     margin-right: 2rem;
 }
@@ -53,8 +52,6 @@
     position: absolute;
     top: 1rem;
     left: 1rem;
-    /* margin-right: 13rem;
-    margin-top: 2rem; */
 }
 
 
@@ -67,7 +64,6 @@
     z-index: 1;
     width: 38%;
     height: 90%;
-    /* padding: 18%; */
     background: url('../../img/dragon.png') no-repeat center/cover;
 }
 
@@ -105,15 +101,6 @@
     left: 80%;
     top: 1rem;
 }
-
-
-/* .sectionTop4Games */
-
-
-/* .sectionTop4Games article:nth-of-type(1) img {
-    display: none;
-    background-image: url(${props.thumbnail});
-} */
 
 @media screen and (max-width: 375px) {
     .sectionTop {
