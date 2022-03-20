@@ -11,7 +11,9 @@ export default function AllGames() {
     const [recent, setRecent] = useState([])
     const [error, setError] = useState(false)
 
-    const [isActive, setActive] = useState(false)
+    const [isActivePlatform, setActivePlatform] = useState(false)
+    const [isActiveCategor, setActiveCategor] = useState(false)
+    const [isActiveSort, setActiveSort] = useState(false)
 
     let loaded
     let selectedTags
@@ -35,6 +37,7 @@ export default function AllGames() {
     };
     console.log(selected);
 
+    //get Values from click of sortstuff
     const handlePlatformChange = ev => {
         setPlatformSelect(ev.target.value)
     }
@@ -45,18 +48,22 @@ export default function AllGames() {
     }
     console.log(sortSelect);
 
+    //Toggle für Ausklappen
+    //Platform
     const handlePlatformOnClick = even => {  //Click for toggle of Platform to displayn options
-        setActive(!isActive);
+        setActivePlatform(!isActivePlatform);
         even.stopPropagation()
     }
 
+    //Categories
     const handleCategorOnClick = even => {  //Click for toggle of Categories to displayn options
-        setActive(!isActive);
+        setActiveCategor(!isActiveCategor);
         even.stopPropagation()
     }
 
+    //Sorting
     const handleSortOnClick = even => {  //Click for toggle of Sort to displayn options
-        setActive(!isActive);
+        setActiveSort(!isActiveSort);
         even.stopPropagation()
     }
 
@@ -249,7 +256,7 @@ export default function AllGames() {
             </section>
             <div className="selection">
 
-                <div className={isActive ? 'platforms-Check handlePlatformChange' : 'platforms-Check'} onClick={handlePlatformOnClick}>
+                <div className={isActivePlatform ? 'platforms-Check handlePlatformChange' : 'platforms-Check'} onClick={handlePlatformOnClick}>
                     <h3>PLATFORM</h3>
                     <ul className="platforms-Check-list" onClick={handlePlatformOnClick}>
                         <li>
@@ -269,7 +276,7 @@ export default function AllGames() {
                         </li>
                     </ul>
                 </div>
-                <div className={isActive ? 'categor-Check handleCategorChange' : 'categor-Check'} onClick={handleCategorOnClick}>
+                <div className={isActiveCategor ? 'categor-Check handleCategorChange' : 'categor-Check'} onClick={handleCategorOnClick}>
                     <h3>GENRE/TAG</h3>
                     {Categories.map((item, key) => (
                         <ul key={key} className="categor-Check-list" onClick={handleCategorOnClick}>
@@ -287,7 +294,7 @@ export default function AllGames() {
                         </ul>
                     ))}
                 </div>
-                <div className={isActive ? 'sort-Check handleSortChange' : 'sort-Check'} onClick={handleSortOnClick}>
+                <div className={isActiveSort ? 'sort-Check handleSortChange' : 'sort-Check'} onClick={handleSortOnClick}>
                     <h3>SORT BY</h3>
                     <ul className="sort-Check-list" onClick={handleSortOnClick}>
 
