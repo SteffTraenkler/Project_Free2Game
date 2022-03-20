@@ -1,182 +1,182 @@
 [
     {
         "id": "2d",
-        "genre": "2d"
+        "genre": "2D"
     },
     {
         "id": "3d",
-        "genre": "3d"
+        "genre": "3D"
     },
     {
         "id": "action",
-        "genre": "action"
+        "genre": "Action"
     },
     {
         "id": "action-rpg",
-        "genre": "action-rpg"
+        "genre": "Action-RPG"
     },
     {
         "id": "anime",
-        "genre": "anime"
+        "genre": "Anime"
     },
     {
         "id": "battle-royale",
-        "genre": "battle-royale"
+        "genre": "Battle Royale"
     },
     {
         "id": "card",
-        "genre": "card"
+        "genre": "Card"
     },
     {
         "id": "fantasy",
-        "genre": "fantasy"
+        "genre": "Fantasy"
     },
     {
         "id": "fighting",
-        "genre": "fighting"
+        "genre": "Fighting"
     },
     {
         "id": "first-person",
-        "genre": "first-person"
+        "genre": "First-Person"
     },
     {
         "id": "flight",
-        "genre": "flight"
+        "genre": "Flight"
     },
     {
         "id": "horror",
-        "genre": "horror"
+        "genre": "Horror"
     },
     {
         "id": "low-spec",
-        "genre": "low-spec"
+        "genre": "Low Spec"
     },
     {
         "id": "martial-arts",
-        "genre": "martial-arts"
+        "genre": "Martial Arts"
     },
     {
         "id": "military",
-        "genre": "military"
+        "genre": "Military"
     },
     {
         "id": "mmo",
-        "genre": "mmo"
+        "genre": "MMO"
     },
     {
         "id": "mmofps",
-        "genre": "mmofps"
+        "genre": "MMOFPS"
     },
     {
         "id": "mmorpg",
-        "genre": "mmorpg"
+        "genre": "MMORPG"
     },
     {
         "id": "mmorts",
-        "genre": "mmorts"
+        "genre": "MMORTS"
     },
     {
         "id": "mmotps",
-        "genre": "mmotps"
+        "genre": "MMOTPS"
     },
     {
         "id": "moba",
-        "genre": "moba"
+        "genre": "MOBA"
     },
     {
         "id": "open-world",
-        "genre": "open-world"
+        "genre": "Open-World"
     },
     {
         "id": "permadeath",
-        "genre": "permadeath"
+        "genre": "Permadeath"
     },
     {
         "id": "pixel",
-        "genre": "pixel"
+        "genre": "Pixel"
     },
     {
         "id": "pve",
-        "genre": "pve"
+        "genre": "PvE"
     },
     {
         "id": "pvp",
-        "genre": "pvp"
+        "genre": "PvP"
     },
     {
         "id": "racing",
-        "genre": "racing"
+        "genre": "Racing"
     },
     {
         "id": "sailing",
-        "genre": "sailing"
+        "genre": "Sailing"
     },
     {
         "id": "sandbox",
-        "genre": "sandbox"
+        "genre": "Sandbox"
     },
     {
         "id": "sci-fi",
-        "genre": "sci-fi"
+        "genre": "Sci-Fi"
     },
     {
         "id": "shooter",
-        "genre": "shooter"
+        "genre": "Shooter"
     },
     {
         "id": "side-scroller",
-        "genre": "side-scroller"
+        "genre": "Side-Scroller"
     },
     {
         "id": "social",
-        "genre": "social"
+        "genre": "Social"
     },
     {
         "id": "space",
-        "genre": "space"
+        "genre": "Space"
     },
     {
         "id": "sports",
-        "genre": "sports"
+        "genre": "Sports"
     },
     {
         "id": "strategy",
-        "genre": "strategy"
+        "genre": "Strategy"
     },
     {
         "id": "superhero",
-        "genre": "superhero"
+        "genre": "Superhero"
     },
     {
         "id": "survival",
-        "genre": "survival"
+        "genre": "Survival"
     },
     {
         "id": "tank",
-        "genre": "tank"
+        "genre": "Tank"
     },
     {
         "id": "third-Person",
-        "genre": "third-Person"
+        "genre": "Third-Person"
     },
     {
         "id": "top-down",
-        "genre": "top-down"
+        "genre": "Top-Down"
     },
     {
         "id": "tower-defense",
-        "genre": "tower-defense"
+        "genre": "Tower Defense"
     },
     {
         "id": "turn-based",
-        "genre": "turn-based"
+        "genre": "Turn-Based"
     },
     {
         "id": "voxel",
-        "genre": "voxel"
+        "genre": "Voxel"
     },
     {
         "id": "zombie",
-        "genre": "zombie"
+        "genre": "Zombie"
     }
 ]

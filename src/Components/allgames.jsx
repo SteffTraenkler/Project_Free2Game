@@ -11,8 +11,11 @@ export default function AllGames() {
     const [recent, setRecent] = useState([])
     const [error, setError] = useState(false)
 
+    const [isActive, setActive] = useState(false)
+
     let loaded
     let selectedTags
+    let newneededArr
 
     // console.log(selected);
     // console.log(platformSelect);
@@ -42,8 +45,13 @@ export default function AllGames() {
     }
     console.log(sortSelect);
 
+    const handleOnClick = even => {
+        setActive(!isActive);
+        even.stopPropagation()
+    }
+
     useEffect(() => {
-        let newneededArr = []
+        newneededArr = []
         if (platformSelect === "" && selected.length === 0 && sortSelect === "") {
             loaded = true
             console.log('AllGames Inhalte wurden neu gerendert');
@@ -230,62 +238,82 @@ export default function AllGames() {
                 </article>
             </section>
             <div className="selection">
-                <h3>Hallo</h3>
-                <form className="platforms-Check">
-                    <ul className="platforms-Check-list">
+
+                <div className={isActive ? 'platforms-Check handlePlatformChange' : 'platforms-Check'} onClick={handleOnClick}>
+                    <h3>PLATFORM</h3>
+                    <ul className="platforms-Check-list" onClick={handleOnClick}>
                         <li>
-                    <input type="radio" value="all" id="all" onChange={handlePlatformChange} name="platform"
-                    />
-                    <label htmlFor="all">All Platforms</label>
-                    </li>
-                    <li>
-                    <input type="radio" value="pc" id="pc" onChange={handlePlatformChange} name="platform"
-                    />
-                    <label htmlFor="pc">Windows(PC)</label>
-                    </li>
-                    <li>
-                    <input type="radio" value="browser" id="browser" onChange={handlePlatformChange} name="platform"
-                    />
-                    <label htmlFor="browser">Browser(Web)</label>
-                    </li>
-                    </ul>
-                </form>
-                <form className="categoriesCheck">
-                    {Categories.map((item, key, index) => (
-                        <div key={key}>
-                            <label htmlFor={item.id}>{item.name}</label>
-                            <input
-                                id={item.id}
-                                value={item.id}
-                                type="checkbox"
-                                disabled={!(selected.length < 4) && !(selected.some(val => val === item.id))}
-                                checked={(selected.some(val => val === item.id))}
-                                onChange={handleChange}
+                            <input type="radio" value="all" id="all" onChange={handlePlatformChange} name="platform"
                             />
-                            <label htmlFor={`custom-checkbox-${item.id}`}>{item.genre}</label>
-                        </div>
+                            <label htmlFor="all">All Platforms</label>
+                        </li>
+                        <li>
+                            <input type="radio" value="pc" id="pc" onChange={handlePlatformChange} name="platform"
+                            />
+                            <label htmlFor="pc">Windows(PC)</label>
+                        </li>
+                        <li>
+                            <input type="radio" value="browser" id="browser" onChange={handlePlatformChange} name="platform"
+                            />
+                            <label htmlFor="browser">Browser(Web)</label>
+                        </li>
+                    </ul>
+                </div>
+                <div className={isActive ? 'categor-Check handleCategorChange' : 'categor-Check'} onClick={handleOnClick}>
+                    <h3>GENRE/TAG</h3>
+                    {Categories.map((item, key) => (
+                        <ul key={key} className="categor-Check-list" onClick={handleOnClick}>
+                            <li>
+                                <input
+                                    id={item.id}
+                                    value={item.id}
+                                    type="checkbox"
+                                    disabled={!(selected.length < 4) && !(selected.some(val => val === item.id))}
+                                    checked={(selected.some(val => val === item.id))}
+                                    onChange={handleChange}
+                                />
+                                <label htmlFor={`custom-checkbox-${item.id}`}>{item.genre}</label>
+                            </li>
+                        </ul>
                     ))}
-                </form>
-                <form className="sortCheck">
-                    <input type="radio" value="relevance" id="relevance" onChange={handleSortingChange} name="sorting"
-                    />
-                    <label htmlFor="all">Relevance</label>
+                </div>
+                <div className={isActive ? 'sort-Check handleSortChange' : 'sort-Check'} onClick={handleOnClick}>
+                    <h3>SORT BY</h3>
+                    <ul className="sort-Check-list" onClick={handleOnClick}>
 
-                    <input type="radio" value="popularity" id="popularity" onChange={handleSortingChange} name="sorting"
-                    />
-                    <label htmlFor="popularity">Popularity</label>
+                        <li>
+                            <input type="radio" value="relevance" id="relevance" onChange={handleSortingChange} name="sorting"
+                            />
+                            <label htmlFor="all">Relevance</label>
+                        </li>
 
-                    <input type="radio" value="release-date" id="release-date" onChange={handleSortingChange} name="sorting"
-                    />
-                    <label htmlFor="release-date">Release Date</label>
+                        <li>
+                            <input type="radio" value="popularity" id="popularity" onChange={handleSortingChange} name="sorting"
+                            />
+                            <label htmlFor="popularity">Popularity</label>
+                        </li>
 
-                    <input type="radio" value="alphabetical" id="alphabetical" onChange={handleSortingChange} name="sorting"
-                    />
-                    <label htmlFor="alphabetical">Alphabetical</label>
+                        <li>
+                            <input type="radio" value="release-date" id="release-date" onChange={handleSortingChange} name="sorting"
+                            />
+                            <label htmlFor="release-date">Release Date</label>
+                        </li>
 
-                </form>
+                        <li>
+                            <input type="radio" value="alphabetical" id="alphabetical" onChange={handleSortingChange} name="sorting"
+                            />
+                            <label htmlFor="alphabetical">Alphabetical</label>
+                        </li>
+
+                    </ul>
+                </div>
                 <div>
-                    <label>Checked: </label>{JSON.stringify(selected)}
+                    {selected.map((key) => {
+                        return (
+                            <div className="helloooMapp">
+                                <p>{key}</p>
+                            </div>)
+                    })}
                 </div>
             </div>
             <section className="secRecently">
