@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [fetchAllAndRecent, setFetchAllAndRecent] = useState([])
-  // const [fetchRecent, setFetchRecent] = useState([])
 
   let x
 
@@ -31,22 +30,24 @@ function App() {
   }, [x])
 
 
-  useEffect(() => {
-    let loaded = true
-    console.log('AllGames Inhalte wurden neu gerendert');
+  //->> this function was originally used to create a second fetch for the child elements but later on in the project wasn't needed anymore
+  // useEffect(() => {
+  //   let loaded = true
+  //   console.log('AllGames Inhalte wurden neu gerendert');
 
-    fetch('https://www.freetogame.com/api/games')
-      .then(resp => resp.json())
-      .then(json => {
-        if (loaded) {
-          console.log(json);
-          setFetchAllAndRecent(fetchAllAndRecent => [...fetchAllAndRecent, json])
-        } return () => {
-          loaded = false
-          console.log('fetch AllGames closed');
-        }
-      })
-  }, [x])
+  //   fetch('https://www.freetogame.com/api/games')
+  //     .then(resp => resp.json())
+  //     .then(json => {
+  //       if (loaded) {
+  //         console.log(json);
+  //         setFetchAllAndRecent(fetchAllAndRecent => [...fetchAllAndRecent, json])
+  //       } return () => {
+  //         loaded = false
+  //         console.log('fetch AllGames closed');
+  //       }
+  //     })
+  // }, [x])
+
 
 
   return (

@@ -6,9 +6,8 @@ export default function Searchbar() {
     const [suche, setSuche] = useState("")
     const [filterGames, setFilterGames] = useState([])
 
-
     const handleSubmit = (evt) => {
-        console.log('submitbutton');
+        console.log('submitbutton targeted'); //Feature in Version 2.0
     }
 
     const handleChange = (e) => {

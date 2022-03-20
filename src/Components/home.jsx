@@ -22,8 +22,6 @@ export default function Home() {
         let loaded = true
         let newTopgamesArr = []
 
-        //Wenn möglich Datum noch anpassen im fatch
-
         fetch('https://www.freetogame.com/api/games?platform=pc&sort-by=release-date&sort-by=popularity')
             .then(respone => respone.json())
             .then(json => {
@@ -43,8 +41,6 @@ export default function Home() {
     useEffect(() => {
         let loaded = true
         let newTopBrowserArr = []
-
-        // let loaded = true //für user um das er nicht zu dolle klicken
 
         fetch('https://www.freetogame.com/api/games?platform=browser&sort-by=release-date&sort-by=popularity')
             .then(respone => respone.json())
@@ -67,9 +63,7 @@ export default function Home() {
 
         <main>
             <section className="sectionHero">
-                {/* <article> */}
                 <h1>FIND & TRACK THE BEST FREE-TO-PLAY GAMES!</h1>
-                {/* </article> */}
             </section>
             <section className="sectionRecently">
                 <h2>Recently Added</h2>
