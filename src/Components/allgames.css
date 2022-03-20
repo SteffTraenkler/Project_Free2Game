@@ -205,9 +205,6 @@
     .allgamesHero {
         margin: 9rem 0px 7rem 1rem;
     }
-    .secRecently {
-        /* margin: 0; */
-    }
     .secRecently article {
         display: grid;
         grid-template-columns: 1fr;
