@@ -15,9 +15,9 @@ export default function AllGames() {
     const [isActiveCategor, setActiveCategor] = useState(false)
     const [isActiveSort, setActiveSort] = useState(false)
 
-    let loaded
-    let selectedTags
-    let newneededArr
+    // let loaded
+    // let selectedTags
+    // let newneededArr
 
     // console.log(selected);
     // console.log(platformSelect);
@@ -68,9 +68,9 @@ export default function AllGames() {
     }
 
     useEffect(() => {
-        newneededArr = []
+        let newneededArr = []
         if (platformSelect === "" && selected.length === 0 && sortSelect === "") {
-            loaded = true
+            let loaded = true
             console.log('AllGames Inhalte wurden neu gerendert');
 
             fetch('https://www.freetogame.com/api/games')
@@ -86,7 +86,7 @@ export default function AllGames() {
                     }
                 })
         } else if (platformSelect === "" && selected.length === 0) {
-            loaded = true
+            let loaded = true
             console.log('Inhalte für Sortierung only wurden neu gerendert');
 
             fetch(`https://www.freetogame.com/api/games?sort-by=${sortSelect}`)
@@ -102,7 +102,7 @@ export default function AllGames() {
                     }
                 })
         } else if (selected.length === 0 && sortSelect === "") {
-            loaded = true;
+            let loaded = true;
             console.log('Inhalte für Platform only wurden neu gerendert');
             fetch(`https://www.freetogame.com/api/games?platform=${platformSelect}`)
                 .then(resp => resp.json())
@@ -117,7 +117,7 @@ export default function AllGames() {
                     }
                 })
         } else if (selected.length === 0) {
-            loaded = true
+            let loaded = true
             console.log('Inhalte für Platform + Sorting wurden neu gerendert');
             fetch(`https://www.freetogame.com/api/games?platform=${platformSelect}&sort-by=${sortSelect}`)
                 .then(resp => resp.json())
@@ -132,8 +132,8 @@ export default function AllGames() {
                     }
                 })
         } else if (platformSelect === "" && selected.length > 0 && sortSelect === "") {
-            loaded = true
-            selectedTags = selected.join('.')
+            let loaded = true
+            let selectedTags = selected.join('.')
             console.log(selectedTags);
             console.log('Inhalte für Categories only wurden neu gerendert');
 
@@ -157,8 +157,8 @@ export default function AllGames() {
                     }
                 })
         } else if (platformSelect === "" && selected.length > 0) {
-            loaded = true
-            selectedTags = selected.join('.')
+            let loaded = true
+            let selectedTags = selected.join('.')
             console.log(selectedTags);
             console.log('Inhalte für Categories + Sorting wurden neu gerendert');
 
@@ -182,8 +182,8 @@ export default function AllGames() {
                     }
                 })
         } else if (selected.length > 0 && sortSelect === "") {
-            loaded = true
-            selectedTags = selected.join('.')
+            let loaded = true
+            let selectedTags = selected.join('.')
             console.log(selectedTags);
             console.log('Inhalte für Categories + Platform wurden neu gerendert');
 
@@ -207,8 +207,8 @@ export default function AllGames() {
                     }
                 })
         } else if (selected.length > 0) {
-            loaded = true
-            selectedTags = selected.join('.')
+            let loaded = true
+            let selectedTags = selected.join('.')
             console.log(selectedTags);
             console.log('Inhalte für Platform + Categories + Sorting wurden neu gerendert');
 
