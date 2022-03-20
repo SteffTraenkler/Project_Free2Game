@@ -30,17 +30,6 @@ const TopBrowser = (props) => {
                                     <img src={BrowerImg} alt="browserImg" />
                                 </div>
                             )
-                        } else if ((props.platform === "PC (Windows), Web Browser") || (props.platform === "Web Browser, PC (Windows)")) {
-                            return (
-                                <div>
-                                    <div className='windows animated-box in'>
-                                        <img src={WindowsImg} alt="windowsImg" />
-                                    </div>
-                                    <div className='browser animated-box in'>
-                                        <img src={BrowerImg} alt="browserImg" />
-                                    </div>
-                                </div>
-                            )
                         }
                     })()}
                     <div className='animated-box in'>

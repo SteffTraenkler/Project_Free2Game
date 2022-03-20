@@ -99,7 +99,7 @@ export default function Details() {
                         </article>
                         <article>
                             {(() => {
-                                if (gameDetail.platform === "Windows") {
+                                if (gameDetail.platform === "Windows" || gameDetail.platform === "Windows, Web Browser") {
                                     return (
                                         <article className="system">
                                             <h2>Minimum System Requirements (Windows)</h2>
