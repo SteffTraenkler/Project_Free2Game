@@ -384,6 +384,7 @@ input[type=checkbox] {
 .errorMessage{
     font-size: 1em;
     text-align: center;
+    font-family: 'Oswald', sans-serif;
 }
 .kurbi{
     background: url(../img/Kurbi.png) no-repeat center/cover;

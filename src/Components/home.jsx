@@ -86,7 +86,7 @@ export default function Home() {
             </section>
 
             <section className="sectionTop">
-                <h2>Top 4 Games for PC in June 2021</h2>
+                <h2>Top 4 Games for PC in March 2022</h2>
                 <article className="sectionTop4Games">
                     {topgames.map((elem, j) => {
                         return (
