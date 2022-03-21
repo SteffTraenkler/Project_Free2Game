@@ -139,6 +139,7 @@ export default function AllGames() {
                             setRecent([])
                             console.log('Error: API has no Objects to display');
                         } else {
+                            setError(false)
                             setRecent(json)
                             console.log('searched fetch ok, API has Objects to display');
                         }
@@ -164,6 +165,7 @@ export default function AllGames() {
                             setRecent([])
                             console.log('Error: API has no Objects to display');
                         } else {
+                            setError(false)
                             setRecent(json)
                             console.log('searched fetch ok, API has Objects to display');
                         }
@@ -178,17 +180,18 @@ export default function AllGames() {
             console.log(selectedTags);
             console.log('Inhalte für Categories + Platform wurden neu gerendert');
 
-            fetch(`https://www.freetogame.com/api/games?platform=${platformSelect}&tag=${selectedTags}`)
+            fetch(`https://www.freetogame.com/api/filter?platform=${platformSelect}&tag=${selectedTags}`)
                 .then(resp => resp.json())
                 .then(json => {
                     if (loaded) {
                         console.log(json);
-                        console.log(`https://www.freetogame.com/api/games?platform=${platformSelect}&tag=${selectedTags}`);
+                        console.log(`https://www.freetogame.com/api/filter?platform=${platformSelect}&tag=${selectedTags}`);
                         if (json.status === 0) {
                             setError(true)
                             setRecent([])
                             console.log('Error: API has no Objects to display');
                         } else {
+                            setError(false)
                             setRecent(json)
                             console.log('searched fetch ok, API has Objects to display');
                         }
@@ -203,17 +206,18 @@ export default function AllGames() {
             console.log(selectedTags);
             console.log('Inhalte für Platform + Categories + Sorting wurden neu gerendert');
 
-            fetch(`https://www.freetogame.com/api/games?platform=${platformSelect}&tag=${selectedTags}&sort-by=${sortSelect}`)
+            fetch(`https://www.freetogame.com/api/filter?platform=${platformSelect}&tag=${selectedTags}&sort-by=${sortSelect}`)
                 .then(resp => resp.json())
                 .then(json => {
                     if (loaded) {
                         console.log(json);
-                        console.log(`https://www.freetogame.com/api/games?platform=${platformSelect}&tag=${selectedTags}&sort-by=${sortSelect}`);
+                        console.log(`https://www.freetogame.com/api/filter?platform=${platformSelect}&tag=${selectedTags}&sort-by=${sortSelect}`);
                         if (json.status === 0) {
                             setError(true)
                             setRecent([])
                             console.log('Error: API has no Objects to display');
                         } else {
+                            setError(false)
                             setRecent(json)
                             console.log('searched fetch ok, API has Objects to display');
                         }
