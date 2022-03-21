@@ -1,10 +1,30 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import allG from '../Components/data/allgames.json'
+// import allG from '../Components/data/allgames.json'
 
 export default function Searchbar() {
+    const [allGames, setAllGames] = useState([])
     const [suche, setSuche] = useState("")
     const [filterGames, setFilterGames] = useState([])
+
+    let x
+
+    useEffect(() => {
+        let loaded = true
+        console.log('Searchbar AllGames Inhalte wurden gerendert');
+
+        fetch('https://www.freetogame.com/api/games')
+            .then(resp => resp.json())
+            .then(json => {
+                if (loaded) {
+                    console.log(json);
+                    setAllGames(json)
+                } return () => {
+                    loaded = false
+                    console.log('fetch for searchbar all games closed');
+                }
+            })
+    }, [x])
 
     const handleSubmit = (evt) => {
         console.log('submitbutton targeted'); //Feature in Version 2.0
@@ -13,7 +33,7 @@ export default function Searchbar() {
     const handleChange = (e) => {
         const searchedWord = e.target.value;
         setSuche(searchedWord);
-        const nFilter = allG.filter((value) => {
+        const nFilter = allGames.filter((value) => {
             return value.title.toLowerCase().includes(searchedWord.toLowerCase())
         });
 
@@ -63,6 +83,4 @@ export default function Searchbar() {
             </div>
         </section >
     )
-
-
 }
