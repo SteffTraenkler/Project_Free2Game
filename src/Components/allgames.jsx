@@ -3,6 +3,7 @@ import Categories from '../Components/data/category.json'
 import '../Components/allgames.css'
 import GeneralCard from "./props/generalProps";
 
+
 export default function AllGames() {
     const [selected, setSelected] = useState([]);
     const [platformSelect, setPlatformSelect] = useState("");
@@ -251,31 +252,44 @@ export default function AllGames() {
             </section>
             <div className="selection">
 
-                <div className={isActivePlatform ? 'platforms-Check handlePlatformChange' : 'platforms-Check'} onClick={handlePlatformOnClick}>
+            <div className={isActivePlatform ? 'platforms-Check handlePlatformChange' : 'platforms-Check'} onClick={handlePlatformOnClick}>
                     <h3>PLATFORM</h3>
                     <ul className="platforms-Check-list" onClick={handlePlatformOnClick}>
-                        <li>
+                        <li className="customize-radio">
+                            <label htmlFor="all">
                             <input type="radio" value="all" id="all" onChange={handlePlatformChange} name="platform"
                             />
-                            <label htmlFor="all">All Platforms</label>
+                            <span id="Cross"></span>
+                            <span className="textField1">All Platforms</span>
+                            </label>
                         </li>
-                        <li>
+                        <li className="customize-radio">
+                        <label htmlFor="pc">
                             <input type="radio" value="pc" id="pc" onChange={handlePlatformChange} name="platform"
                             />
-                            <label htmlFor="pc">Windows(PC)</label>
+                            <span id="Cross2"></span>
+                            <span className="textField2">Windows(PC)</span>
+                            
+                            </label>
+                            
                         </li>
-                        <li>
+                        <li className="customize-radio">
+                            <label htmlFor="browser">
                             <input type="radio" value="browser" id="browser" onChange={handlePlatformChange} name="platform"
                             />
-                            <label htmlFor="browser">Browser(Web)</label>
+                            <span id="Cross3"></span>
+                            <span className="textField3">Browser(Web)</span>
+                            
+                            </label>
                         </li>
                     </ul>
                 </div>
                 <div className={isActiveCategor ? 'categor-Check handleCategorChange' : 'categor-Check'} onClick={handleCategorOnClick}>
                     <h3>GENRE/TAG</h3>
                     <ul className="categor-Check-list" onClick={handleCategorOnClick}>
-                        {Categories.map((item, key) => (
-                            <li key={key}>
+                    {Categories.map((item, key) => (
+                            <li key={key} className="customize-radio2">
+                                <label htmlFor={`${item.id}`}>
                                 <input
                                     id={item.id}
                                     value={item.id}
@@ -284,56 +298,74 @@ export default function AllGames() {
                                     checked={(selected.some(val => val === item.id))}
                                     onChange={handleChange}
                                 />
-                                <label htmlFor={`custom-checkbox-${item.id}`}>{item.genre}</label>
+                                <span className="Cross4"></span>
+                                <span className="textField4">{item.genre}</span>
+                                </label>
                             </li>
-                        ))}
+                    ))}
                     </ul>
                 </div>
                 <div className={isActiveSort ? 'sort-Check handleSortChange' : 'sort-Check'} onClick={handleSortOnClick}>
                     <h3>SORT BY</h3>
                     <ul className="sort-Check-list" onClick={handleSortOnClick}>
-
-                        <li>
+                        <li className="customize-radio">
+                            <label htmlFor="relevance">
                             <input type="radio" value="relevance" id="relevance" onChange={handleSortingChange} name="sorting"
                             />
-                            <label htmlFor="all">Relevance</label>
+                            <span id="Cross5"></span>
+                            <span className="textField5"></span>
+                            Relevance
+                            </label>
                         </li>
 
-                        <li>
+                        <li className="customize-radio">
+                            <label htmlFor="popularity">
                             <input type="radio" value="popularity" id="popularity" onChange={handleSortingChange} name="sorting"
                             />
-                            <label htmlFor="popularity">Popularity</label>
+                            <span id="Cross6"></span>
+                            <span className="textField5"></span>
+                            Popularity
+                            </label>
                         </li>
 
-                        <li>
+                        <li className="customize-radio">
+                        <label htmlFor="release-date">
                             <input type="radio" value="release-date" id="release-date" onChange={handleSortingChange} name="sorting"
                             />
-                            <label htmlFor="release-date">Release Date</label>
+                            <span id="Cross7"></span>
+                            <span className="textField5"></span>
+                            Release Date
+                            </label>
                         </li>
 
-                        <li>
+                        <li className="customize-radio">
+                            <label htmlFor="alphabetical">
                             <input type="radio" value="alphabetical" id="alphabetical" onChange={handleSortingChange} name="sorting"
                             />
-                            <label htmlFor="alphabetical">Alphabetical</label>
+                            <span id="Cross8"></span>
+                            <span className="textField5"></span>
+                            Alphabetical
+                            </label>
                         </li>
 
                     </ul>
                 </div>
-            </div>
-            <section>
-                {selected.map((key) => {
-                    return (
-                        <div className="helloooMapp">
-                            <p>{key}</p>
-                        </div>)
-                })}
-            </section>
+                </div>
+                <section className="helloooMapp">
+                    {selected.map((key) => {
+                        return (
+                            <div>
+                                <p>{key}</p>
+                            </div>)
+                    })}
+                </section>
             <section className="secRecently">
                 {(() => {
                     if (error === true) {
                         return (
                             <div className="errorMessage">
                                 <h1>Sorry, we couldn't find that mixture of tags :/ Please try selecting some other categories</h1>
+                                <div className="kurbi"></div>
                             </div>
                         )
                     } else {
