@@ -18,6 +18,7 @@ export default function Details() {
                     console.log(json);
                     setScreenshot((json.screenshots))
                     console.log(json.screenshots);
+                    console.log(json.screenshots.length);
                     setGameDetail(json)
                     console.log('Details Inhalte wurden neu gerendert');
                 } return () => {
@@ -27,18 +28,12 @@ export default function Details() {
             })
     }, [gameID])
 
+    console.log(screenShot.length);
+
     return (
         <main className="detailMain">
             <section className="detailHero">
-                {(() => {
-                    if (screenShot.length === 0) {
-                        return (
-                            null
-                        )
-                    } else if (screenShot.length > 0) {
-                        <div><img src={screenShot[0].image} alt={"Hero Pic of " + (gameDetail.title)} /></div>
-                    }
-                })()}
+                <div><img src={screenShot[0].image} alt={"Hero Pic of " + (gameDetail.title)} /></div>
             </section>
             <section className="articleDetail">
                 <article className="artGameDescription">
@@ -58,24 +53,8 @@ export default function Details() {
                 </article>
                 <article className="artGameDetails">
                     <div className="detailsImgFlex">
-                        {(() => {
-                            if (screenShot.length < 1) {
-                                return (
-                                    null
-                                )
-                            } else if (screenShot.length > 1) {
-                                <div><img src={screenShot[1].image} alt={"Screenshot 1 of " + (gameDetail.title)} /></div>
-                            }
-                        })()}
-                        {(() => {
-                            if (screenShot.length < 2) {
-                                return (
-                                    null
-                                )
-                            } else if (screenShot.length > 2) {
-                                <div><img src={screenShot[2].image} alt={"Screenshot 2 of " + (gameDetail.title)} /></div>
-                            }
-                        })()}
+                        <div><img src={screenShot[1].image} alt={"Screenshot 1 of " + (gameDetail.title)} /></div>
+                        <div><img src={screenShot[2].image} alt={"Screenshot 2 of " + (gameDetail.title)} /></div>
                     </div>
                     <section className="lastFlex">
                         <article>
